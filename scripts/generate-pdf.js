@@ -92,9 +92,9 @@ async function generatePDF() {
       path: path.join(__dirname, '..', 'George_Mamaladze_CV.pdf'),
       format: 'A4',
       margin: {
-        top: '0.41in',
+        top: '0.42in',
         right: '0.40in',
-        bottom: '0.41in',
+        bottom: '0.42in',
         left: '0.40in'
       },
       printBackground: true,
