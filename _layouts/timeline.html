@@ -1,0 +1,100 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Timeline</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .job-label {
+            font-size: 12px;
+            fill: #333;
+        }
+        .date-label {
+            font-size: 10px;
+            fill: #666;
+        }
+        .domain {
+            stroke: #ccc;
+        }
+        .tick line {
+            stroke: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="timeline"></div>
+
+    <script>
+        const margin = {top: 20, right: 150, bottom: 30, left: 60};
+        const width = 800 - margin.left - margin.right;
+        const height = 1000 - margin.top - margin.bottom;
+
+        const svg = d3.select("#timeline").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const experiences = [
+            {% for exp in site.data.cv.experience %}
+            {
+                title: "{{ exp.title }}",
+                company: "{{ exp.company }}",
+                timeCommitment: "{{ exp.timeCommitment }}",
+                startDate: new Date("{{ exp.period.start }}"),
+                endDate: {% if exp.period.end %} new Date("{{ exp.period.end }}") {% else %} new Date() {% endif %}
+            }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ];
+
+        const minDate = d3.min(experiences, d => d.startDate);
+        const maxDate = d3.max(experiences, d => d.endDate);
+
+        const yScale = d3.scaleTime()
+            .domain([minDate, maxDate])
+            .range([0, height]);
+
+        const mainJobs = experiences.filter(d => d.timeCommitment === 'full-time');
+        const partTimeJobs = experiences.filter(d => d.timeCommitment === 'part-time');
+
+        const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+
+        const yAxis = d3.axisLeft(yScale).tickFormat(d3.timeFormat("%b %Y"));
+        svg.append("g")
+            .call(yAxis);
+
+        function drawStrips(jobs, xOffset, stripWidth) {
+            const strips = svg.selectAll(`.job-strip-${xOffset}`)
+                .data(jobs)
+                .enter()
+                .append("rect")
+                .attr("class", `job-strip-${xOffset}`)
+                .attr("x", xOffset)
+                .attr("y", d => yScale(d.startDate))
+                .attr("width", stripWidth)
+                .attr("height", d => yScale(d.endDate) - yScale(d.startDate))
+                .attr("fill", (d, i) => colorScale(i));
+
+            svg.selectAll(`.job-label-${xOffset}`)
+                .data(jobs)
+                .enter()
+                .append("text")
+                .attr("class", `job-label job-label-${xOffset}`)
+                .attr("x", xOffset + stripWidth + 5)
+                .attr("y", d => yScale(d.startDate) + 15)
+                .text(d => `${d.title} at ${d.company}`);
+        }
+
+        drawStrips(mainJobs, 0, 50);
+        drawStrips(partTimeJobs, 60, 25);
+    </script>
+</body>
+</html>

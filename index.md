@@ -77,8 +77,19 @@ Siemens Corporate Technology served as the central research and innovation hub f
 - Led the architecture for Spectrum Power NG digital grid control system (real-time platform with Kubernetes, Kafka, Flink).  
 - Architected “Energy as a Service,” a scalable microservice platform for renewable energy analytics.  
 
+`Feb 2020 - Jun 2022`
+__Technical Trainer & Consultant__, *Independent*, Germany (part-time, freelance)
 
-`Oct 2018 - Jan 2019`
+Provided training and consulting services to multiple software companies, focusing on modern cloud-native architecture and microservices implementation.
+
+**Responsibilities**
+- Created and delivered training programs on microservices architecture and cloud-native development: Microservice Patterns, Microservices implementation in Quarkus vs. Spring Boot, Testing strategies for microservices
+- Conducted architecture review workshops
+
+**Key Achievement**
+- Trained over 100 developers across multiple companies, overwhelming positive feedback and measurable improvements in project outcomes
+
+`Oct 2018 - Jan 2020`
 __International Advisor for Small Businesses (ASB)__, *EBRD (European Bank for Reconstruction and Development)*, Global (part-time, freelance)
 
 - Provided strategic guidance and coaching to small businesses in Eastern Europe & CIS
