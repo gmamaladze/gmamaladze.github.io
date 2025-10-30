@@ -1,5 +1,5 @@
 {
-  "summary": "Rare combination of deep **conceptual technical knowledge** and **hands-on expertise**. Technology leader with over 25 years of experience designing, building, and delivering software products and solutions. Ability to build and lead high-performing teams, organize processes, and drive innovation. Experience in interfacing with customers, understanding requirements, collaborating with executive leadership, developing and implementing strategies.",
+  "summary": "Rare combination of deep conceptual technical knowledge and hands-on expertise. Technology leader with over 25 years of experience designing, building, and delivering software products and solutions. Ability to build and lead high-performing teams, organize processes, and drive innovation. Experience in interfacing with customers, understanding requirements, collaborating with executive leadership, developing and implementing strategies.",
   "specializedIn": "Technology strategy, cloud-native architectures, microservices, team leadership, industrial automation software",
   "experience": [
     {
@@ -10,7 +10,7 @@
       },
       "title": "Senior Software Architect",
       "company": "Siemens AG",
-      "division": "Factory Automation, Human Machine Interface",
+      "division": "Factory Automation, HMI",
       "location": "Munich, Germany",
       "brandColor": "#00A693",
       "employmentType": "employed",
@@ -297,38 +297,38 @@
       "description": "Certified Senior Software Architect"
     },
     {
-      "year": "2012",
+      "year": "2013",
       "description": "Member of Agile Alliance"
     },
     {
-      "year": "2011",
+      "year": "2013",
       "description": "Agile Manifesto Translator"
     },
     {
-      "year": "2012",
+      "year": "2013",
       "description": "Co-author of several patents"
     }
   ],
   "languages": [
     {
       "name": "English",
-      "fluency": "fluent"
+      "fluency": "Fluent"
     },
     {
       "name": "German",
-      "fluency": "fluent"
+      "fluency": "Fluent"
     },
     {
       "name": "Chinese",
-      "fluency": "basic"
+      "fluency": "Basic"
     },
     {
       "name": "Russian",
-      "fluency": "native"
+      "fluency": "Native"
     },
     {
       "name": "Georgian",
-      "fluency": "native"
+      "fluency": "Native"
     }
   ],
   "technicalSkills": [
