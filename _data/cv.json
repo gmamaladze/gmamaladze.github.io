@@ -2,15 +2,18 @@
   "experience": [
     {
       "id": "SFA",
-      "period": { "start": "2022-05-01", "end": null },
+      "period": {
+        "start": "2022-05-01",
+        "end": null
+      },
       "title": "Senior Software Architect",
       "company": "Siemens AG",
       "division": "Factory Automation, Human Machine Interface",
       "location": "Munich, Germany",
-    "brandColor": "#00A693",
-  "employmentType": "employed",
-  "timeCommitment": "full-time",
-  "description": "The SIMATIC WinCC Unified System is a new generation of Siemens HMI and SCADA visualization products designed for industrial applications in machine building and factory automation. It addresses the modern challenges of digitization in manufacturing by providing a flexible and open platform with IT/OT integration capabilities.",
+      "brandColor": "#00A693",
+      "employmentType": "employed",
+      "timeCommitment": "full-time",
+      "description": "The SIMATIC WinCC Unified System is a new generation of Siemens HMI and SCADA visualization products designed for industrial applications in machine building and factory automation. It addresses the modern challenges of digitization in manufacturing by providing a flexible and open platform with IT/OT integration capabilities.",
       "website": "https://www.siemens.com/wincc-unified",
       "responsibilities": [
         "Defining technology strategy, aligning product roadmap with business goals and partners",
@@ -24,13 +27,16 @@
     },
     {
       "id": "SYN",
-      "period": { "start": "2022-07-01", "end": null },
+      "period": {
+        "start": "2022-07-01",
+        "end": null
+      },
       "title": "Chief Technical Advisor",
       "company": "Syniotec",
-  "location": "Bremen, Germany (remote)",
-  "brandColor": "#FF3B30",
-  "employmentType": "freelance",
-  "timeCommitment": "part-time",
+      "location": "Bremen, Germany (remote)",
+      "brandColor": "#FF3B30",
+      "employmentType": "freelance",
+      "timeCommitment": "part-time",
       "description": "Syniotec is a fast-growing startup providing digital solutions to the construction industry, enabling companies to optimize operations through IoT-driven telematics and software platforms. As Chief Technical Advisor, I function in practice as the part-time CTO, shaping product vision, technical strategy, and long-term platform strategy.",
       "website": "https://www.syniotec.com",
       "responsibilities": [
@@ -46,7 +52,10 @@
     },
     {
       "id": "TRN",
-      "period": { "start": "2020-02-01", "end": "2022-06-30" },
+      "period": {
+        "start": "2020-02-01",
+        "end": "2022-06-30"
+      },
       "title": "Technical Trainer & Consultant",
       "company": "Independent",
       "location": "Germany",
@@ -63,15 +72,19 @@
     },
     {
       "id": "SCT",
-      "period": { "start": "2018-05-01", "end": "2022-05-01" },
+      "period": {
+        "start": "2018-05-01",
+        "end": "2022-05-01"
+      },
       "title": "Senior Software Architect",
       "company": "Siemens AG",
       "division": "Corporate Technology",
       "location": "Munich, Germany",
-  "brandColor": "#00A693",
-  "employmentType": "employed",
-  "timeCommitment": "full-time",
-  "description": "Siemens Corporate Technology served as the central research and innovation hub for Siemens AG.",
+      "brandColor": "#00A693",
+      "employmentType": "employed",
+      "timeCommitment": "full-time",
+      "website": "https://www.siemens.com/corporate-technology",
+      "description": "Siemens Corporate Technology served as the central research and innovation hub for Siemens AG.",
       "responsibilities": [
         "Designed and conceived cloud-native system architectures for strategic projects.",
         "Advised business units on cloud transformation and innovation.",
@@ -85,33 +98,46 @@
     },
     {
       "id": "EBR",
-      "period": { "start": "2018-10-01", "end": "2020-01-01" },
+      "period": {
+        "start": "2018-10-01",
+        "end": "2020-01-01"
+      },
       "title": "Advisor for Small Businesses",
       "company": "EBRD",
-  "location": "Global",
-  "brandColor": "#004C9F",
-  "employmentType": "freelance",
-  "timeCommitment": "part-time",
+      "location": "Global",
+      "brandColor": "#004C9F",
+      "employmentType": "freelance",
+      "timeCommitment": "part-time",
+      "description": "EBRD (European Bank for Reconstruction and Development) Business Advisory Service programme supports small and medium-sized companies in emerging markets.",
+      "website": "https://www.ebrd.com/home/what-we-do/products-and-services/support-for-start-ups-and-msmes/access-business-advice.html",
       "responsibilities": [
         "Provided strategic guidance and coaching to small businesses in Eastern Europe & CIS",
         "Mentored software teams in modern engineering practices and agile methods",
         "Reworked system architectures to align with business objectives",
         "Introduced structured processes, tools, and templates to improve execution"
+      ],
+      "keyAchievements": [
+        "Overwhelmingly positive feedback from clients backed by measurable business success."
       ]
     },
     {
       "id": "HUA",
-      "period": { "start": "2017-03-01", "end": "2018-04-01" },
+      "period": {
+        "start": "2017-03-01",
+        "end": "2018-04-01"
+      },
       "title": "Principal Software Architect",
       "company": "Huawei",
       "division": "European Research Center",
       "location": "Munich, Germany",
-  "brandColor": "#E60012",
+      "brandColor": "#E60012",
       "employmentType": "employed",
       "timeCommitment": "full-time",
+      "description": "Huawei European Research Center focuses on cutting-edge research and innovation to introduce these into Huawei's products and solutions globally.",
+      "website": "https://www.huawei.com",
       "responsibilities": [
-        "Provided technical leadership for 3–5 concurrent high-impact research projects",
-        "Drove project acquisition, requirement analysis, and technical consulting at HQ in China",
+        "Provided technical leadership for 3-5 concurrent high-impact research projects",
+        "Drove project acquisition, requirements analysis, and technical consulting at HQ in China",
         "Disseminated research findings and knowledge"
       ],
       "keyAchievements": [
@@ -121,52 +147,97 @@
     },
     {
       "id": "SDF",
-      "period": { "start": "2009-07-01", "end": "2017-02-01" },
+      "period": {
+        "start": "2009-07-01",
+        "end": "2017-02-01"
+      },
       "title": "Senior Software Architect",
       "company": "Siemens AG",
       "division": "Digital Factory",
       "location": "Fuerth, Germany",
-  "brandColor": "#00A693",
-  "employmentType": "employed",
-  "timeCommitment": "full-time",
-  "description": "Software Architect, promoted to Certified Senior Software Architect (2015). Worked on TIA-Portal, Siemens' flagship automation IDE, shipping 5 major releases. Managed development across full stack (hardware, firmware, application). Interfaced with customers and partners for product launches",
-      "website": "https://www.siemens.com/tia-portal"
+      "brandColor": "#00A693",
+      "employmentType": "employed",
+      "timeCommitment": "full-time",
+      "description": "Started as Software Architect, promoted to Senior Software Architect in 2015. Worked on TIA-Portal, Siemens' flagship automation IDE.",
+      "website": "https://www.siemens.com/tia-portal",
+      "responsibilities": [
+        "Created and implemented architecture of platform components across full stack (hardware, firmware, application).",
+        "Interfaced with customers and partners for product launches",
+        "Built highly complex products using Product Line Engineering approaches"
+      ],
+      "keyAchievements": [
+        "Shipping 5 major releases.",
+        "Introduced DevOps practices, CI/CD pipelines, and automated testing frameworks",
+        "Spearheaded Test Driven Development (TDD) adoption across multiple teams",
+        "Championed Agile methodologies, measurably increasing delivery speed and product quality"
+      ]
     },
     {
       "id": "ENC",
-      "period": { "start": "2008-02-01", "end": "2009-06-01" },
+      "period": {
+        "start": "2008-02-01",
+        "end": "2009-06-01"
+      },
       "title": "Senior Software Architect",
       "company": "encad Ing. mbH",
       "location": "Nuremberg, Germany",
       "employmentType": "employed",
       "timeCommitment": "full-time",
+      "description": "Encad was a Siemens subcontractor providing staff leasing services. Worked on Siemens TIA-Portal project as Software Architect.",
       "responsibilities": [
-        "Assigned to a customer project with 50+ developers",
+        "Assigned to a customer (Siemens) project with 50+ developers",
         "Conducted architecture reviews and systemic root cause analyses",
         "Introduced CI, static code analysis, and quality assurance measures"
+      ],
+      "keyAchievements": [
+        "Excellent satisfaction feedback from Siemens, which led to transition to Siemens employment."
       ]
     },
     {
       "id": "IQO",
-      "period": { "start": "2001-08-01", "end": "2008-01-01" },
+      "period": {
+        "start": "2001-08-01",
+        "end": "2008-01-01"
+      },
       "title": "Software Project Lead",
       "company": "IQ-optimize Software AG",
       "location": "Nuremberg, Germany",
       "employmentType": "employed",
       "timeCommitment": "full-time",
-      "description": "Launched Germany's first digital prepaid voucher distribution system with a 10-person team. Managed lifecycle of a back-office workflow system (product ownership → development → customer training)."
+      "website": "https://www.iq-optimize.com",
+      "description": "IQ-Work Software AG was subsidiary of Drillisch AG, Germany's leading mobile telecommunications distributor/retailer.",
+      "responsibilities": [
+        "Architecting and leading development of a digital prepaid voucher distribution system",
+        "Managed lifecycle of a back-office workflow system (product ownership, development, customer training)"
+      ],
+      "keyAchievements": [
+        "Launched Germany's first digital prepaid voucher distribution system with a 10-person team",
+        "Delivered and introduced back-office workflow system to multiple customers"
+      ]
     },
     {
       "id": "TBC",
-      "period": { "start": "1999-01-01", "end": "2001-07-01" },
+      "period": {
+        "start": "1999-01-01",
+        "end": "2001-07-01"
+      },
       "title": "Head of IT Department",
       "company": "TBC Bank",
       "location": "Tbilisi, Georgia",
       "employmentType": "employed",
       "timeCommitment": "full-time",
+      "website": "https://www.tbcbank.ge",
+      "description": "TBC Bank is one of the largest banks in Georgia, and one of the leading financial institutions in the region.",
       "responsibilities": [
-        "Managed IT infrastructure, ATMs, POS systems, and integrations",
-        "Oversaw administration and supervision of hardware and software"
+        "Managed a team of IT professionals",
+        "Oversaw administration and supervision of IT infrastructure hardware, software, networks, ATMs, POS systems, and integrations"
+      ],
+      "keyAchievements": [
+        "Created first data center for TBC Bank.",
+        "Introduced new state of the art core banking software.",
+        "Introduced SWIFT connectivity, improving international transaction capabilities.",
+        "Integrated into Visa and MasterCard networks.",
+        "Installed first ATM machines in Georgia."
       ]
     }
   ]

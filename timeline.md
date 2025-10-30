@@ -25,7 +25,8 @@ title: George Mamaladze - Career Timeline
 __{{ job.title }}{% if job_meta != "" %} ({{ job_meta }}){% endif %}__, *{{ job.company }}{% if job.division %} – {{ job.division }}{% endif %}*, {{ job.location }}
 
 {% if job.description %}{{ job.description }}
-{% endif %}
+{% endif %} {% if job.website %}[[{{ job.website | replace: "https://", "" | replace: "http://", "" }}]({{ job.website }})]{% endif %}
+
 
 {% if job.responsibilities %}
 **Responsibilities**
