@@ -13,127 +13,33 @@ title: George Mamaladze - Career Timeline
 </div>
 </div>
 
-<div id="SFA" markdown="1">
-`May 2022 - Present`  
-__Senior Software Architect__, *Siemens AG – Factory Automation, Human Machine Interface*, Munich, Germany
 
-The SIMATIC WinCC Unified System is a new generation of Siemens HMI and SCADA visualization products designed for industrial applications in machine building and factory automation ([siemens.com/wincc-unified](https://www.siemens.com/wincc-unified)). It addresses the modern challenges of digitization in manufacturing by providing a flexible and open platform with IT/OT integration capabilities.
+{% assign jobs = site.data.cv.experience | sort: "period.start" | reverse %}
+{% for job in jobs %}
+{% capture job_meta %}
+{% if job.timeCommitment %}{{ job.timeCommitment | capitalize }}{% endif %}{% if job.employmentType %}{% if job.timeCommitment %}, {% endif %}{{ job.employmentType | replace: "-", " " | capitalize }}{% endif %}
+{% endcapture %}
+{% assign job_meta = job_meta | strip %}
+<div id="{{ job.id }}" class="employment-detail" markdown="1">
+`{{ job.period.start | date: "%b %Y" }} - {% if job.period.end %}{{ job.period.end | date: "%b %Y" }}{% else %}Present{% endif %}`  
+__{{ job.title }}{% if job_meta != "" %} ({{ job_meta }}){% endif %}__, *{{ job.company }}{% if job.division %} – {{ job.division }}{% endif %}*, {{ job.location }}
 
+{% if job.description %}{{ job.description }}
+{% endif %}
+
+{% if job.responsibilities %}
 **Responsibilities**
-- Defining technology strategy, aligning product roadmap with business goals and partners
-- Led and mentored the engineering team Architects
-- Drove the technology roadmap, scanning for innovations, defining development guidelines and tool chains
-- Oversaw the entire development lifecycle, allocating technical resources, collaborating with product owners, finance, and executive leadership to ensure timely delivery and market fit
+{% for item in job.responsibilities %}- {{ item }}
+{% endfor %}
+{% endif %}
 
-**Key Achievement**
-- After 3 years of development of the newly founded business line, delivered the first version of the product to market (currently in limited release, broad release planned)
+{% if job.keyAchievements %}
+**Key Achievement{% if job.keyAchievements | size > 1 %}s{% endif %}**
+{% for achievement in job.keyAchievements %}- {{ achievement }}
+{% endfor %}
+{% endif %}
 </div>
-
-<div id="SYN" markdown="1">
-`Jul 2022 - Present`  
-__Chief Technical Advisor (part-time, freelance)__, *Syniotec*, Bremen, Germany (remote)
-
-[Syniotec](https://www.syniotec.com) is a fast-growing startup providing digital solutions to the construction industry, enabling companies to optimize operations through IoT-driven telematics and software platforms. As Chief Technical Advisor, I function in practice as the part-time CTO.  
-
-**Responsibilities**  
-- Defining the technical roadmap ensuring scalability, security, and maintainability.  
-- Advising the founding team and management.  
-- Mentoring engineering teams on best practices in microservices, DevOps, and cloud infrastructure.  
-- Managing technology stack, vendor partnerships, and integration strategies.  
-
-**Key Achievements**  
-- Established technical standards and processes that enabled Syniotec's transition from startup to scaling vendor.  
-- Redesigned the cloud-native backbone of Syniotec software to scale for thousands of concurrent users and data streams.  
-</div>
-
-<div id="SCT" markdown="1">
-`May 2018 - May 2022`  
-__Senior Software Architect__, *Siemens AG – Corporate Technology*, Munich, Germany
-
-Siemens Corporate Technology served as the central research and innovation hub for Siemens AG.  
-
-**Responsibilities**  
-- Designed and conceived cloud-native system architectures for strategic projects.  
-- Advised business units on cloud transformation and innovation.  
-- Performed architecture reviews and mentored development teams.  
-- Conducted technology research, academic collaboration, and conference talks.  
-
-**Key Achievements**  
-- Led the architecture for Spectrum Power NG digital grid control system (real-time platform with Kubernetes, Kafka, Flink).  
-- Architected "Energy as a Service," a scalable microservice platform for renewable energy analytics.  
-</div>
-
-<div id="TRN" markdown="1">
-`Feb 2020 - Jun 2022`  
-__Technical Trainer & Consultant__, *Independent*, Germany (part-time, freelance)
-
-Provided training and consulting services to multiple software companies, focusing on modern cloud-native architecture and microservices implementation.
-
-**Responsibilities**
-- Created and delivered training programs on microservices architecture and cloud-native development: Microservice Patterns, Microservices implementation in Quarkus vs. Spring Boot, Testing strategies for microservices
-- Conducted architecture review workshops
-
-**Key Achievement**
-- Trained over 100 developers across multiple companies, overwhelming positive feedback and measurable improvements in project outcomes
-</div>
-
-<div id="EBR" markdown="1">
-`Oct 2018 - Jan 2020`  
-__International Advisor for Small Businesses (ASB)__, *EBRD (European Bank for Reconstruction and Development)*, Global (part-time, freelance)
-
-- Provided strategic guidance and coaching to small businesses in Eastern Europe & CIS
-- Mentored software teams in modern engineering practices and agile methods
-- Reworked system architectures to align with business objectives
-- Introduced structured processes, tools, and templates to improve execution
-</div>
-
-<div id="HUA" markdown="1">
-`Mar 2017 - Apr 2018`  
-__Principal Software Architect__, *Huawei – European Research Center*, Munich, Germany
-
-- Provided technical leadership for 3–5 concurrent high-impact research projects
-- Drove project acquisition, requirement analysis, and technical consulting at HQ in China
-- Disseminated research findings and knowledge
-
-**Key Achievements** 
-- Architected methodology and toolchain for modularizing large-scale Java projects. 
-- Designed scalable microservice architecture for Huawei Cloud IDE.
-</div>
-
-<div id="SDF" markdown="1">
-`Jul 2009 - Feb 2017`  
-__Senior Software Architect__, *Siemens AG – Digital Factory*, Fuerth, Germany
-
-- Software Architect, promoted to Certified Senior Software Architect (2015).  
-- Worked on [TIA-Portal](https://www.siemens.com/tia-portal), Siemens' flagship automation IDE, shipping 5 major releases.  
-- Managed development across full stack (hardware, firmware, application).  
-- Interfaced with customers and partners for product launches
-</div>
-
-<div id="ENC" markdown="1">
-`Feb 2008 - Jun 2009`  
-__Senior Software Architect__, *encad Ing. mbH*, Nuremberg, Germany
-
-- Assigned to a customer project with 50+ developers
-- Conducted architecture reviews and systemic root cause analyses
-- Introduced CI, static code analysis, and quality assurance measures
-</div>
-
-<div id="IQO" markdown="1">
-`Aug 2001 - Jan 2008`  
-__Software Project Lead__, *IQ-optimize Software AG*, Nuremberg, Germany
-
-- Launched Germany's first digital prepaid voucher distribution system with a 10-person team.  
-- Managed lifecycle of a back-office workflow system (product ownership → development → customer training).  
-</div>
-
-<div id="TBC" markdown="1">
-`Jan 1999 - Jul 2001`  
-__Head of IT Department__, *TBC Bank*, Tbilisi, Georgia
-
-- Managed IT infrastructure, ATMs, POS systems, and integrations
-- Oversaw administration and supervision of hardware and software
-</div>
+{% endfor %}
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
@@ -150,7 +56,7 @@ __Head of IT Department__, *TBC Bank*, Tbilisi, Georgia
         flex: 1 1 0;
         min-width: 300px;
         max-width: 600px;
-        padding-left: 10px;
+        padding-left: 15px;
         margin-top: 70px;
     }
     .job-label {
@@ -176,6 +82,9 @@ __Head of IT Department__, *TBC Bank*, Tbilisi, Georgia
         margin-right: 0 !important;
         box-sizing: border-box;
     }
+    .employment-detail {
+        display: none;
+    }
 </style>
 
 <script>
@@ -190,7 +99,7 @@ const labelOffsets = {
 
 const margin = {top: 0, right: 0, bottom: 0, left: 50};
 const width = 410 - margin.left - margin.right;
-const height = 1000 - margin.top - margin.bottom;
+const height = Math.round((1000 - margin.top - margin.bottom) * 0.85);
 
 const svg = d3.select("#timeline").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -216,30 +125,17 @@ const partTimeJobs = experiences.filter(d => d.timeCommitment === 'part-time');
 
 const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
 
-// Map company IDs to brand-like colors (override palette when provided)
-const companyColors = {
-    // Siemens divisions: Persian/Petrol green-like
-    "SFA": "#00A693", // Factory Automation
-    "SCT": "#00A693", // Corporate Technology
-    "SDF": "#00A693", // Digital Factory
-    // Huawei: brand red
-    "HUA": "#E60012",
-    // Syniotec: bright red
-    "SYN": "#FF3B30",
-    // EBRD: Professional blue
-    "EBR": "#004C9F"  // European Bank for Reconstruction and Development
-};
-
-// Fallback color scale for companies without specific color assignments
-const getCompanyColor = (company, id) => companyColors[id] || colorScale(company);
+// Prefer brand color from data; fall back to palette when missing
+const getCompanyColor = job => job.brandColor || colorScale(job.company);
 
 const yAxis = d3.axisLeft(yScale).tickFormat(d3.timeFormat("%b %Y"));
 svg.append("g")
     .call(yAxis);
 
 function showEmploymentDetails(id) {
+    clearTimeout(clearDetailsTimeout);
     // Hide all employment sections
-    const allSections = ["SFA","SYN","SCT","TRN","EBR","HUA","SDF","ENC","IQO","TBC"];
+    const allSections = cvData.experience.map(d => d.id);
     allSections.forEach(secId => {
         const sec = document.getElementById(secId);
         if (sec) sec.style.display = "none";
@@ -283,8 +179,8 @@ function drawStrips(jobs, xOffset, stripWidth) {
         .attr("y", d => Math.min(yScale(d.startDate), yScale(d.endDate)))
         .attr("width", stripWidth)
         .attr("height", d => Math.abs(yScale(d.endDate) - yScale(d.startDate)) - 2)
-        .attr("fill", d => getCompanyColor(d.company, d.id))
-        .attr("fill-opacity", xOffset === 50 ? 0.3 : 1); // 70% opacity for part-time jobs (xOffset 80)
+    .attr("fill", d => getCompanyColor(d))
+    .attr("fill-opacity", xOffset === 80 ? 0.5 : 1);
 
     // Draw connector lines
     jobGroups.append("line")
