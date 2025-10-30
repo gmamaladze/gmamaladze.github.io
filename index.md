@@ -23,11 +23,11 @@ permalink: /
 
 ### Specialized in
 
-Technology strategy, cloud-native architectures, microservices, team leadership, and industrial automation software
+Technology strategy, cloud-native architectures, microservices, team leadership, industrial automation software
 
 ### Summary
 
-A technology leader with over 25 years of experience designing, building, and delivering impactful software solutions. I combine deep conceptual technical knowledge and hands-on expertise with the ability to build and lead high-performing teams. My experience extends from interfacing with customers, understanding requirements to collaborating with executive leadership to ensure timely delivery and strategic market fit.
+Rare combination of deep **conceptual technical knowledge** and **hands-on expertise**. Technology leader with over 25 years of experience designing, building, and delivering software products and solutions. Ability to build and lead high-performing teams, organize processes, and drive innovation. Experience in interfacing with customers, understanding requirements, collaborating with executive leadership, developing and implementing strategies.
 
 ---
 
