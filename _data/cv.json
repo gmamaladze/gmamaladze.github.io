@@ -1,4 +1,6 @@
 {
+  "summary": "Rare combination of deep **conceptual technical knowledge** and **hands-on expertise**. Technology leader with over 25 years of experience designing, building, and delivering software products and solutions. Ability to build and lead high-performing teams, organize processes, and drive innovation. Experience in interfacing with customers, understanding requirements, collaborating with executive leadership, developing and implementing strategies.",
+  "specializedIn": "Technology strategy, cloud-native architectures, microservices, team leadership, industrial automation software",
   "experience": [
     {
       "id": "SFA",
@@ -238,6 +240,165 @@
         "Introduced SWIFT connectivity, improving international transaction capabilities.",
         "Integrated into Visa and MasterCard networks.",
         "Installed first ATM machines in Georgia."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "period": {
+        "start": "2003-09-01",
+        "end": "2004-08-01"
+      },
+      "program": "Post-graduate Studies in Computer Science",
+      "institution": "FernUni Hagen",
+      "location": "Hagen, Germany",
+      "notes": [
+        "Free student (Gasthörer), completed 4 semesters"
+      ]
+    },
+    {
+      "period": {
+        "start": "1993-09-01",
+        "end": "1999-06-01"
+      },
+      "program": "Diploma in Computer Science",
+      "institution": "Tbilisi State University",
+      "location": "Tbilisi, Georgia",
+      "notes": [
+        "Faculty of Applied Mathematics and Computer Science",
+        "Scholarship holder of the George Soros Foundation"
+      ]
+    },
+    {
+      "period": {
+        "start": "1989-09-01",
+        "end": "1993-05-01"
+      },
+      "program": "Specialized School for Physics and Mathematics",
+      "institution": "High School",
+      "location": "Tbilisi, Georgia",
+      "notes": [
+        "Graduated with honors",
+        "Winner (1st Place), International Young Physicists' Tournament"
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "year": "2018",
+      "description": "Certified AWS Solution Architect"
+    },
+    {
+      "year": "2015",
+      "description": "CodeProject MVP"
+    },
+    {
+      "year": "2014",
+      "description": "Certified Senior Software Architect"
+    },
+    {
+      "year": "2012",
+      "description": "Member of Agile Alliance"
+    },
+    {
+      "year": "2011",
+      "description": "Agile Manifesto Translator"
+    },
+    {
+      "year": "2012",
+      "description": "Co-author of several patents"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "fluency": "fluent"
+    },
+    {
+      "name": "German",
+      "fluency": "fluent"
+    },
+    {
+      "name": "Chinese",
+      "fluency": "basic"
+    },
+    {
+      "name": "Russian",
+      "fluency": "native"
+    },
+    {
+      "name": "Georgian",
+      "fluency": "native"
+    }
+  ],
+  "technicalSkills": [
+    {
+      "category": "Languages & Frameworks",
+      "items": [
+        "C#",
+        "Java",
+        "Python",
+        "TypeScript",
+        "Node.js",
+        "ASP.NET Core",
+        "Angular"
+      ]
+    },
+    {
+      "category": "Architecture",
+      "items": [
+        "OO-Patterns (GoF)",
+        "Microservice Patterns",
+        "Architecture Evaluation",
+        "Requirements Engineering",
+        "Domain Driven Design",
+        "Testing Strategies",
+        "Guidance & Governance",
+        "Continuous Delivery",
+        "AWS Well-Architected Framework",
+        "Cloud Cost Management",
+        "Event-Driven Architecture"
+      ]
+    },
+    {
+      "category": "Platforms & Products",
+      "items": [
+        "Cloud Platforms",
+        "Kubernetes",
+        "Kafka",
+        "Flink",
+        "PostgreSQL",
+        "DynamoDB",
+        "Terraform",
+        "Prometheus",
+        "Grafana",
+        "OpenTelemetry"
+      ]
+    },
+    {
+      "category": "Tools",
+      "items": [
+        "Git",
+        "Azure DevOps",
+        "Visual Studio Code",
+        "IntelliJ IDEA",
+        "Docker",
+        "GitHub Actions",
+        "GitLab CI",
+        "SonarQube",
+        "JFrog"
+      ]
+    },
+    {
+      "category": "Practices",
+      "items": [
+        "Agile",
+        "Scrum",
+        "Lean Management",
+        "Clean Code",
+        "TDD",
+        "CI/CD",
+        "Management 3.0"
       ]
     }
   ]

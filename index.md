@@ -16,27 +16,28 @@ permalink: /
 
 ### Currently
 
-**Senior Software Architect at Siemens AG** – Factory Automation, Human Machine Interface in Munich, Germany
+{% assign current_jobs = site.data.cv.experience | where_exp: "job", "job.period.end == nil"  %}
+{% for job in current_jobs %}
+**{{ job.title }}** at _{{ job.company }}{% if job.division %} – {{ job.division }}{% endif %}_ {{ job.location }}
 
-
-**Chief Technical Advisor at Syniotec** (part-time, freelance), Bremen, Germany (remote)
+{% endfor %}
 
 ### Specialized in
 
-Technology strategy, cloud-native architectures, microservices, team leadership, industrial automation software
+{{ site.data.cv.specializedIn }}
 
 ### Summary
 
-Rare combination of deep **conceptual technical knowledge** and **hands-on expertise**. Technology leader with over 25 years of experience designing, building, and delivering software products and solutions. Ability to build and lead high-performing teams, organize processes, and drive innovation. Experience in interfacing with customers, understanding requirements, collaborating with executive leadership, developing and implementing strategies.
+{{ site.data.cv.summary }}
 
 ---
 
 ## Experience
 
-{% assign jobs = site.data.cv.experience | sort: "period.start" | reverse %}
+{% assign jobs = site.data.cv.experience %}
 {% for job in jobs %}
 {% capture job_meta %}
-{% if job.timeCommitment %}{{ job.timeCommitment | capitalize }}{% endif %}{% if job.employmentType %}{% if job.timeCommitment %}, {% endif %}{{ job.employmentType | replace: "-", " " | capitalize }}{% endif %}
+{% if job.timeCommitment %}{{ job.timeCommitment }}{% endif %}{% if job.employmentType %}{% if job.timeCommitment %}, {% endif %}{{ job.employmentType }}{% endif %}
 {% endcapture %}
 {% assign job_meta = job_meta | strip %}
 `{{ job.period.start | date: "%b %Y" }} - {% if job.period.end %}{{ job.period.end | date: "%b %Y" }}{% else %}Present{% endif %}`
@@ -62,67 +63,43 @@ __{{ job.title }}{% if job_meta != "" %} ({{ job_meta }}){% endif %}__, *{{ job.
 
 ## Education
 
-`Sep 2003 - Aug 2004`
-__Post-graduate Studies in Computer Science__, *FernUni Hagen*, Hagen, Germany
+{% assign education_entries = site.data.cv.education %}
+{% for edu in education_entries %}
+`{{ edu.period.start | date: "%b %Y" }} - {{ edu.period.end | date: "%b %Y" }}`
+__{{ edu.program }}__, *{{ edu.institution }}*, {{ edu.location }}
 
-- Free student (Gasthörer), completed 4 semesters
-
-`Sep 1993 - Jun 1999`
-__Diploma in Computer Science__, *Tbilisi State University*, Tbilisi, Georgia
-
-- Faculty of Applied Mathematics and Computer Science
-- Scholarship holder of the George Soros Foundation
-
-`Sep 1989 - May 1993`
-__Specialized School for Physics and Mathematics__, *High School*, Tbilisi, Georgia
-
-- Graduated with honors
-- Winner (1st Place), International Young Physicists' Tournament
+{% if edu.notes %}
+{% for note in edu.notes %}- {{ note }}
+{% endfor %}
+{% endif %}
+{% endfor %}
 
 ## Achievements
 
-`2018`
-Certified AWS Solution Architect
+{% assign achievements = site.data.cv.achievements %}
+{% for achievement in achievements %}
+`{{ achievement.year }}`
+{{ achievement.description }}
 
-`2015`
-CodeProject MVP
-
-`2014`
-Certified Senior Software Architect
-
-`2013`
-Member of Agile Alliance
-
-Agile Manifesto Translator
-
-Co-author of several patents
-
-Open Source Enthusiast
+{% endfor %}
 
 ## Languages
 
-**Fluent:** English, German  
-**Basic:** Chinese  
-**Native:** Russian, Georgian
+{% assign languages = site.data.cv.languages %}
+{% for language in languages %}
+_{{ language.name }}_ - {{ language.fluency }}
+{% endfor %}
 
 ## Technical Skills
 
 <div class="skills" markdown="1">
 
-#### Languages & Frameworks
-`C#` `Java` `Python` `TypeScript` `Node.js` `ASP.NET Core` `Angular`
+{% assign skill_categories = site.data.cv.technicalSkills %}
+{% for category in skill_categories %}
+#### {{ category.category }}
+{% for item in category.items %}`{{ item }}`{% unless forloop.last %} {% endunless %}{% endfor %}
 
-#### Architecture
-`OO-Patterns (GoF)` `Microservice Patterns` `Architecture Evaluation` `Requirements Engineering` `Domain Driven Design` `Testing Strategies` `Guidance & Governance` `Continuous Delivery` `AWS Well-Architected Framework` `Cloud Cost Management` `Event-Driven Architecture`
-
-#### Platforms & Products
-`Cloud Platforms` `Kubernetes` `Kafka` `Flink` `PostgreSQL` `DynamoDB` `Terraform` `Prometheus` `Grafana` `OpenTelemetry`
-
-#### Tools
-`Git` `Azure DevOps` `Visual Studio Code` `IntelliJ IDEA` `Docker` `GitHub Actions` `GitLab CI` `SonarQube` `JFrog`
-
-#### Practices
-`Agile` `Scrum` `Lean Management` `Clean Code` `TDD` `CI/CD` `Management 3.0`
+{% endfor %}
 
 </div>
 
