@@ -17,9 +17,11 @@ jobs:
 
     - name: Read version and create config
       run: |
-        VERSION=$(cat version)
-        echo "Read version: $VERSION"
+        VERSION=$(cat version | tr -d '\n' | tr -d '\r')
+        echo "Read version: '$VERSION'"
         echo "version: $VERSION" > _config_version.yml
+        cat _config_version.yml
+        echo "Version config file created"
       shell: bash
 
     - name: Setup Ruby
@@ -31,11 +33,6 @@ jobs:
     - name: Install Jekyll dependencies
       run: |
         bundle install
-
-    - name: Build Jekyll site with version
-      run: |
-        bundle exec jekyll build --trace --config _config.yml,_config_version.yml
-      shell: bash
       
     - name: Setup Typst
       uses: typst-community/setup-typst@v3
@@ -45,12 +42,34 @@ jobs:
     - name: Generate PDF with Typst
       run: |
         typst compile index.typ George_Mamaladze_CV.pdf
-          
-    - name: Copy PDF to site directory for GitHub Pages
+        ls -la
+        echo "PDF generated successfully"
+
+    - name: Build Jekyll site with version
       run: |
-        # Copy the generated PDF to _site directory so it's included in the GitHub Pages deployment
-        cp "George_Mamaladze_CV.pdf" _site/
+        bundle exec jekyll build --trace --config _config.yml,_config_version.yml
+      shell: bash
+          
+    - name: Verify PDF in site directory
+      run: |
         ls -la _site/
+        if [ -f "_site/George_Mamaladze_CV.pdf" ]; then
+          echo "✓ PDF found in _site directory"
+        else
+          echo "✗ PDF NOT found in _site directory - copying manually"
+          cp "George_Mamaladze_CV.pdf" _site/
+        fi
+        
+    - name: Verify version in generated HTML
+      run: |
+        echo "Checking if version appears in index.html..."
+        if grep -q "Version: $(cat version)" _site/index.html; then
+          echo "✓ Version $(cat version) found in index.html"
+        else
+          echo "✗ Version NOT found in index.html"
+          echo "Contents around 'Version:' in index.html:"
+          grep -A 2 -B 2 "Version:" _site/index.html || echo "Version string not found at all"
+        fi
     
         
     - name: Setup Pages (if main branch)
