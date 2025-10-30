@@ -41,8 +41,10 @@ __{{ job.title }}{% if job_meta != "" %} ({{ job_meta }}){% endif %}__, *{{ job.
 </div>
 {% endfor %}
 
+<!-- D3 timeline below reuses the same cv.json dataset for visualization -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
+    /* Layout styling keeps timeline and details panel aligned */
     .timeline-details-wrapper {
         display: flex;
         flex-direction: row;
@@ -82,12 +84,14 @@ __{{ job.title }}{% if job_meta != "" %} ({{ job_meta }}){% endif %}__, *{{ job.
         margin-right: 0 !important;
         box-sizing: border-box;
     }
+    /* Hidden employment detail blocks stay out of layout until populated into #details */
     .employment-detail {
         display: none;
     }
 </style>
 
 <script>
+// cv.json powers both the textual details above and this D3 timeline
 var cvData = {{ site.data.cv | jsonify }};
 
 // Label offset adjustments by experience ID
