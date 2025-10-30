@@ -184,10 +184,12 @@
 ]
 
 // Achievements section
-#heading(level: 1, numbering: none)[Achievements]
+#block(breakable: false)[
+  #heading(level: 1, numbering: none)[Achievements]
 
-#for achievement in cv.achievements [
-  - *#achievement.year* - #achievement.description
+  #for achievement in cv.achievements [
+    - *#achievement.year* - #achievement.description
+  ]
 ]
 
 #v(0.5em)
