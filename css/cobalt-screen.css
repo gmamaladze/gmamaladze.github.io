@@ -146,15 +146,15 @@ h4 {
 }
 
 /* Emphasis variants with consistent accent color */
-b, strong { 
-    color: var(--color-primary); 
-    font-weight: 600;
+b, strong {
+    color: #1B4B8C;
+    font-weight: 700;
 }
 
-i, em { 
-    color: var(--color-secondary); 
-    font-style: normal;
-    font-weight: 500;
+i, em {
+    color: var(--color-secondary);
+    font-style: italic;
+    font-weight: 400;
 }
 
 /* Links with modern styling */
