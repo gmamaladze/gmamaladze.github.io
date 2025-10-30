@@ -37,24 +37,14 @@ jobs:
         bundle exec jekyll build --trace --config _config.yml,_config_version.yml
       shell: bash
       
-    - name: Setup Node.js for Puppeteer
-      uses: actions/setup-node@v4
+    - name: Setup Typst
+      uses: typst-community/setup-typst@v3
       with:
-        node-version: '18'
-        
-    - name: Install PDF generation dependencies
-      run: |
-        npm install
-          
-    - name: Build Jekyll site for PDF (without baseurl)
-      run: |
-        echo "baseurl: ''" > _config_pdf.yml
-        bundle exec jekyll build --trace --config _config.yml,_config_version.yml,_config_pdf.yml --destination _site_pdf
-      shell: bash
+        typst-version: 'latest'
 
-    - name: Convert HTML to PDF (via Puppeteer)
+    - name: Generate PDF with Typst
       run: |
-        npm run generate-pdf
+        typst compile index.typ George_Mamaladze_CV.pdf
           
     - name: Copy PDF to site directory for GitHub Pages
       run: |

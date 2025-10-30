@@ -31,7 +31,7 @@
 // Document setup
 #set page(
   paper: "a4",
-  margin: (x: 2cm, y: 2cm),
+  margin: (x: 2cm, y: 1.5cm),
   header: [
     #align(right)[
       #text(size: 8pt, fill: gray.lighten(50%))[v#version]
@@ -44,7 +44,7 @@
   ]
 )
 #set text(
-  font: "Georgia",
+  font: "Libertinus Serif",
   size: 10.5pt
 )
 #set par(
@@ -62,7 +62,7 @@
 
 // Title
 #align(center)[
-  #text(size: 28pt, weight: "bold")[#name]
+  #text(size: 16pt, weight: "bold")[#name]
   #v(-0.3em)
   #line(length: 60%, stroke: 1pt)
 ]
@@ -206,8 +206,12 @@
 
 #for category in cv.technicalSkills [
   #par[
-    *#category.category:* 
-    #for (i, item) in category.items.enumerate() [#item#if i < category.items.len() - 1 [ #h(0.5em) • #h(0.5em) ]]
+    *#category.category:*
+  ]
+  #pad(left: 1em)[
+    #par[
+      #for (i, item) in category.items.enumerate() [#item#if i < category.items.len() - 1 [ #h(0.5em) • #h(0.5em) ]]
+    ]
   ]
   
   #v(0.3em)

@@ -35,7 +35,8 @@ __{{ job.title }}{% if job_meta != "" %} ({{ job_meta }}){% endif %}__, *{{ job.
 {% endif %}
 
 {% if job.keyAchievements %}
-**Key Achievement{% if job.keyAchievements | size > 1 %}s{% endif %}**
+{% assign achievementCount = job.keyAchievements | size %}
+**Key Achievement{% if achievementCount > 1 %}s{% endif %}**
 {% for achievement in job.keyAchievements %}- {{ achievement }}
 {% endfor %}
 {% endif %}

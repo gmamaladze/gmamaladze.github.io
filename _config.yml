@@ -8,6 +8,9 @@ baseurl: ""
 include:
   - css/
 
+keep_files:
+  - George_Mamaladze_CV.pdf
+
 exclude:
   - Gemfile
   - Gemfile.lock
