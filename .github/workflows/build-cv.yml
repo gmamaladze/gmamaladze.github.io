@@ -15,13 +15,14 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Read version and create config
+    - name: Read version and update config
       run: |
         VERSION=$(cat version | tr -d '\n' | tr -d '\r')
         echo "Read version: '$VERSION'"
-        echo "version: $VERSION" > _config_version.yml
-        cat _config_version.yml
-        echo "Version config file created"
+        # Update the version directly in _config.yml
+        sed -i "s/version: dev/version: $VERSION/" _config.yml
+        echo "Updated _config.yml with version: $VERSION"
+        grep "version:" _config.yml
       shell: bash
 
     - name: Setup Ruby
@@ -47,7 +48,7 @@ jobs:
 
     - name: Build Jekyll site with version
       run: |
-        bundle exec jekyll build --trace --config _config.yml,_config_version.yml
+        bundle exec jekyll build --trace
       shell: bash
           
     - name: Verify PDF in site directory
