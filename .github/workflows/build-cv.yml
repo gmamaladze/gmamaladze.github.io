@@ -48,7 +48,12 @@ jobs:
 
     - name: Build Jekyll site with version
       run: |
+        echo "=== Contents of _config.yml before build ==="
+        cat _config.yml
+        echo "=== Building site ==="
         bundle exec jekyll build --trace
+        echo "=== Checking generated index.html ==="
+        grep "cv-version" _site/index.html || echo "cv-version not found"
       shell: bash
           
     - name: Verify PDF in site directory
