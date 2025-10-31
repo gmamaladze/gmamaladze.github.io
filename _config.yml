@@ -5,9 +5,6 @@ style: cobalt
 repository: gmamaladze/gmamaladze.github.io
 baseurl: ""
 
-include:
-  - css/
-
 keep_files:
   - George_Mamaladze_CV.pdf
 

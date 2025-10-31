@@ -10,7 +10,7 @@ Claude Sonnet 4 has been used but in a "Gini in the bottle way" (see The intervi
 - `index.typ` contains the [Typst](https://typst.app/) template for PDF generation. Data is pulled from `_data/cv.json`.
 - Common markdown rules and conventions are used in `index.md` except:
   - `code` is used for dates that need to be fixed width
-  - CSS is used extensively: `cobalt-screen.css` for web and `cobalt-print.css` for PDF preview (style configured in `_config.yml`)
+  - CSS is used extensively: `cobalt.css` in the root directory (style configured in `_config.yml`)
 - Bump the version according to [semver](https://semver.org/). Significant rework bumps major.
 - Commit directly to main. Every push results in deployment.
 - Test locally before pushing (see below).

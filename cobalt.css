@@ -1,3 +1,31 @@
+/* Version badge in upper right */
+.cv-version {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    background: #fff;
+    padding: 0.2em 0.8em;
+    border-radius: 1em;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    z-index: 100;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Profile image in upper right corner */
+.profile-image {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 60%;
+    object-fit: cover;
+    border: 1px solid var(--color-primary);
+    z-index: 99;
+    top: -65px;
+    right: 0%;
+}
+
 /* Import modern fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap');
 
@@ -11,50 +39,6 @@
     --color-border: #e2e8f0;        /* Light border */
     --color-chip-bg: #f8fafc;       /* Off-white chip background */
     --color-background: #ffffff;    /* Clean white background */
-}
-
-/* Profile image in upper right corner for print */
-.profile-image {
-    position: absolute;
-    width: 86px;
-    height: 86px;
-    border-radius: 80%;
-    object-fit: cover;
-    border: 1px solid var(--color-primary);
-    z-index: 99;
-    top: -45px;
-    right: 0%;
-}
-
-.download-link {
-    /* do not show text but take space */
-    display: inline-block;
-    color: #ffffff;
-    visibility: hidden;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* Version badge for print */
-.cv-version {
-    display: none; /* Hide by default */
-    position: absolute;
-    top: 20px;
-    right: 60px;
-    font-size: 0.9rem;
-    color: var(--color-secondary);
-    background: #d90707;
-    padding: 0.1em 0.5em;
-    border-radius: 0.8em;
-    z-index: 100;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Reduce overall font sizes for print by lowering the root font-size. */
-html {
-    font-size: 60%; /* was browser default (~16px). 60% => ~9.6px */
 }
 
 body {
@@ -89,7 +73,7 @@ body {
 
 p {
     position: relative;
-    left: 20%;
+    left: 30%;
     width: 70%;
     line-height: 1.6;
     font-size: 1rem;
@@ -97,7 +81,7 @@ p {
 
 ul { 
     position: relative;
-    left: 20%;
+    left: 30%;
     width: 65%;
     line-height: 1.6;
     font-size: 1rem;
@@ -124,9 +108,9 @@ h1, h2, h3 {
 
 h1 {
     position: relative;
-    left: 20%;
+    left: 30%;
     text-align: left;
-    font-size: 2rem; /* Adjusted for print */
+    font-size: 2.25rem; /* Larger, more prominent */
     color: var(--color-primary);
     font-weight: 700;
     line-height: 1.2;
@@ -136,8 +120,8 @@ h1 {
 h2, h3{
     position: relative;
     text-align: right;
-    left: -85%;
-    font-size: 1rem; /* Adjusted for print */
+    left: -75%;
+    font-size: 1.125rem; /* Semantic scaling */
     color: var(--color-secondary);
     font-weight: 600;
     line-height: 1.3;
@@ -146,29 +130,58 @@ h2, h3{
 h3 {
     margin-bottom: -2.6rem;
     color: var(--color-tertiary);
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
 }   
 
 h4 {
     position: relative;
     text-align: right;
-    left: -82%;
+    left: -75%;
     margin-bottom: -2.6rem;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     font-weight: 600;
     color: var(--color-primary);
 }
 
 /* Emphasis variants with consistent accent color */
-b, strong { 
-    color: var(--color-primary); 
-    font-weight: 600;
+b, strong {
+    color: #1B4B8C;
+    font-weight: 700;
 }
 
-i, em { 
-    color: var(--color-secondary); 
-    font-style: normal;
-    font-weight: 500;
+i, em {
+    color: var(--color-secondary);
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Links with modern styling */
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease;
+}
+
+a:hover {
+    border-bottom-color: var(--color-secondary);
+}
+
+/* Download link styling */
+.download-link {
+    display: inline-block;
+    color: var(--color-secondary);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-secondary);
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+}
+
+.download-link:hover {
+    background-color: var(--color-secondary);
+    color: white;
+    border-bottom: 1px solid var(--color-secondary);
 }
