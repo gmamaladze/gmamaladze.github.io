@@ -2,9 +2,16 @@
 layout: cv
 title: George Mamaladze - Career Timeline
 ---
+
 # George Mamaladze
----
 ![George Mamaladze](gmamaladze-profile.png){: .profile-image}
+
+---
+
+[Download PDF](George_Mamaladze_CV.pdf){: .download-link}
+[Classic View](./){: .download-link}
+
+
 
 <div class="timeline-details-wrapper">
 <div id="timeline"></div>

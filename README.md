@@ -4,13 +4,14 @@ Professional CV of George Mamaladze, built with Jekyll.
 Claude Sonnet 4 has been used but in a "Gini in the bottle way" (see The interview with Kent Beck).
 
 ## Things to remember (to future George)
-- `index.md` contains all the text and formatting for the HTML version
-- `index.typ` contains the Typst template for PDF generation
-- `_data/cv.json` is the single source of truth for CV content (used by both HTML and PDF)
+- `_data/cv.json` is the main data file and single source of truth for CV content
+- `index.md` contains [Liquid](https://shopify.github.io/liquid/) templates that make [Jekyll](https://jekyllrb.com/) markdown out of `_data/cv.json` and formatting for the HTML version
+- `timeline.md` contains the timeline view created using [D3.js](https://d3js.org/) it also uses `_data/cv.json`
+- `index.typ` contains the [Typst](https://typst.app/) template for PDF generation. Data is pulled from `_data/cv.json`.
 - Common markdown rules and conventions are used in `index.md` except:
-- `code` is used for dates that need to be fixed width
-- CSS is used extensively: `cobalt-screen.css` for web and `cobalt-print.css` for PDF preview (style configured in `_config.yml`)
-- Bump the version according to "semver". Significant rework bumps major.
+  - `code` is used for dates that need to be fixed width
+  - CSS is used extensively: `cobalt-screen.css` for web and `cobalt-print.css` for PDF preview (style configured in `_config.yml`)
+- Bump the version according to [semver](https://semver.org/). Significant rework bumps major.
 - Commit directly to main. Every push results in deployment.
 - Test locally before pushing (see below).
 
@@ -41,8 +42,7 @@ docker-compose down
 
 **What happens:**
 - Jekyll container builds HTML and serves it at http://localhost:4000 with live reload
-- Typst container watches `index.typ` and auto-compiles directly into `_site/George_Mamaladze_CV.pdf`
-- Changes to `index.typ` or `_data/cv.json` trigger automatic PDF regeneration
+- Typst container watches `index.typ` and auto-compiles directly into `_site/George_Mamaladze_CV.pdf`, changes to `index.typ` or `_data/cv.json` trigger automatic PDF regeneration
 - The PDF is immediately available at http://localhost:4000/George_Mamaladze_CV.pdf
 - Local version does not display the version number (a placeholder is used instead)
 
