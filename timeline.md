@@ -108,6 +108,7 @@ const labelOffsets = {
     "SFA": { x: 0, y: 40 }, // Adjust Syniotec to avoid overlap
     "TRN": { x: 0, y: 40 },   // Training position
     "EBR": { x: 0, y: 0 },   // EBRD
+    "FUN": { x: 0, y: 30  }, // FreeeUniversity
 };
 
 const margin = {top: 0, right: 0, bottom: 0, left: 50};

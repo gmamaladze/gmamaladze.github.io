@@ -123,6 +123,30 @@
       ]
     },
     {
+      "id": "FUN",
+      "period": {
+        "start": "2014-10-01",
+        "end": "2016-10-01"
+      },
+      "title": "Invited Lecturer",
+      "company": "Free University of Tbilisi",
+      "location": "Tbilisi, Georgia (hybrid)",
+      "employmentType": "freelance",
+      "timeCommitment": "part-time",
+      "description": "Free University of Tbilisi is the leading private university in Georgia. Conducted lectures and practical projects on Software Architecture and Design Patterns for Computer Science students.",
+      "website": "https://freeuni.edu.ge",
+      "brandColor": "#ffd600",
+      "responsibilities": [
+        "Developed curriculum and course materials",
+        "Delivered lectures and hands-on sessions",
+        "Emphasis on course projects and real-world applications"
+      ],
+      "keyAchievements": [
+        "Educated and inspired a new generation of software engineers in Georgia, many of whom have gone on to successful careers in the tech industry worldwide.",
+        "Materials are still in use by universities internationally."
+      ]
+    },
+    {
       "id": "HUA",
       "period": {
         "start": "2017-03-01",
