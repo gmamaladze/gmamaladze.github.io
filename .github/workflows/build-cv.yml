@@ -35,18 +35,14 @@ jobs:
         typst compile cv-printable.typ George_Mamaladze_CV.pdf
         mkdir -p _site
         cp George_Mamaladze_CV.pdf _site/
+      shell: bash
     
     - name: Build Jekyll site
       run: |
         bundle exec jekyll build --trace
       shell: bash
-          
-    - name: Setup Pages (if main branch)
-      if: github.ref == 'refs/heads/main'
-      uses: actions/configure-pages@v4
       
     - name: Upload to GitHub Pages
-      if: github.ref == 'refs/heads/main'
       uses: actions/upload-pages-artifact@v3
       with:
         path: _site

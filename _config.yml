@@ -4,9 +4,6 @@ style: cobalt
 repository: gmamaladze/gmamaladze.github.io
 baseurl: ""
 
-keep_files:
-  - George_Mamaladze_CV.pdf
-
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -14,3 +11,4 @@ exclude:
   - README.md
   - tmp/
   - vendor/
+  - cv-printable.typ
