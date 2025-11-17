@@ -1,6 +1,7 @@
 ---
 layout: cv
 title: George Mamaladze - Career Timeline
+permalink: /
 ---
 
 # George Mamaladze
@@ -8,8 +9,8 @@ title: George Mamaladze - Career Timeline
 
 ---
 
+[Classic View](./classic){: .download-link}
 [Download PDF](George_Mamaladze_CV.pdf){: .download-link}
-[Classic View](./){: .download-link}
 
 
 

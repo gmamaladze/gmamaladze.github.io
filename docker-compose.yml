@@ -23,7 +23,7 @@ services:
       - .:/data:Z
       - ./_site:/data/_site:Z
     working_dir: /data
-    command: watch index.typ _site/George_Mamaladze_CV.pdf
+    command: watch cv-printable.typ _site/George_Mamaladze_CV.pdf
     stdin_open: true
     tty: true
     depends_on:

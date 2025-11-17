@@ -1,7 +1,7 @@
 ---
 layout: cv
 title: George Mamaladze's CV
-permalink: /
+permalink: /classic
 ---
 
 # George Mamaladze
@@ -9,8 +9,9 @@ permalink: /
 
 ---
 
+[Timeline View](./){: .download-link}
 [Download PDF](George_Mamaladze_CV.pdf){: .download-link}
-[Timeline View](./timeline){: .download-link}
+
 
 [linkedin.com/in/gmamaladze](https://www.linkedin.com/in/gmamaladze)
 

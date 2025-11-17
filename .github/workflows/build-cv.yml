@@ -42,7 +42,7 @@ jobs:
 
     - name: Generate PDF with Typst
       run: |
-        typst compile index.typ George_Mamaladze_CV.pdf
+        typst compile cv-printable.typ George_Mamaladze_CV.pdf
         ls -la
         echo "PDF generated successfully"
 
