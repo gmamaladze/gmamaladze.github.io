@@ -19,7 +19,7 @@
 </head>
 <body>
   <div id="main">
-    <div class="cv-version">Version: {{ site.version | default: 'dev' }}</div>
+    <div class="cv-version">Version: {{ site.data.version.number | default: 'dev' }}</div>
     <div id="content">
     {{ content }}
     </div>
