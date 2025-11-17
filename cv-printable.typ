@@ -1,6 +1,6 @@
 #let cv = json("_data/cv.json")
 #let name = "George Mamaladze"
-#let version = read("version").trim()
+#let version = "1.3.3"
 
 // Helper functions
 #let parse-date(date-str) = {
