@@ -46,6 +46,12 @@ jobs:
         ls -la
         echo "PDF generated successfully"
 
+    - name: Copy PDF to site directory before Jekyll build
+      run: |
+        mkdir -p _site
+        cp George_Mamaladze_CV.pdf _site/
+        echo "✓ PDF copied to _site directory before Jekyll build"
+    
     - name: Build Jekyll site with version
       run: |
         echo "=== Contents of _config.yml before build ==="
@@ -61,9 +67,10 @@ jobs:
         ls -la _site/
         if [ -f "_site/George_Mamaladze_CV.pdf" ]; then
           echo "✓ PDF found in _site directory"
+          ls -lh _site/George_Mamaladze_CV.pdf
         else
-          echo "✗ PDF NOT found in _site directory - copying manually"
-          cp "George_Mamaladze_CV.pdf" _site/
+          echo "✗ PDF NOT found in _site directory"
+          exit 1
         fi
         
     - name: Verify version in generated HTML
