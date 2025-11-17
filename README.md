@@ -11,7 +11,7 @@ Claude Sonnet 4 has been used but in a "Gini in the bottle way" (see The intervi
 - Common markdown rules and conventions are used in `index.md` except:
   - `code` is used for dates that need to be fixed width
   - CSS is used extensively: `cobalt.css` in the root directory (style configured in `_config.yml`)
-- Bump the version according to [semver](https://semver.org/). Significant rework bumps major.
+- Version number is set directly in `_config.yml`. Bump it according to [semver](https://semver.org/) when making significant changes.
 - Commit directly to main. Every push results in deployment.
 - Test locally before pushing (see below).
 
@@ -34,7 +34,6 @@ docker-compose up --build
 # PDF will auto-regenerate when you edit cv-printable.typ or cv.json
 # PDF is available at http://localhost:4000/George_Mamaladze_CV.pdf
 
-# To preview print version in browser, press ctrl+p
 
 # Stop the containers when done
 docker-compose down
@@ -44,7 +43,6 @@ docker-compose down
 - Jekyll container builds HTML and serves it at http://localhost:4000 with live reload
 - Typst container watches `cv-printable.typ` and auto-compiles directly into `_site/George_Mamaladze_CV.pdf`, changes to `cv-printable.typ` or `_data/cv.json` trigger automatic PDF regeneration
 - The PDF is immediately available at http://localhost:4000/George_Mamaladze_CV.pdf
-- Local version does not display the version number (a placeholder is used instead)
 
 ## Publishing
 There are two types of GitHub pages. Project and User/Organization. This is a User/Organization page. That's why it must be in the `main` branch and the repository must be named `gmamaladze.github.io`.

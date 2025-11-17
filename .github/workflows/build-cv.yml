@@ -15,16 +15,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Read version and update config
-      run: |
-        VERSION=$(cat version | tr -d '\n' | tr -d '\r')
-        echo "Read version: '$VERSION'"
-        # Update the version directly in _config.yml
-        sed -i "s/version: dev/version: $VERSION/" _config.yml
-        echo "Updated _config.yml with version: $VERSION"
-        grep "version:" _config.yml
-      shell: bash
-
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -52,14 +42,9 @@ jobs:
         cp George_Mamaladze_CV.pdf _site/
         echo "✓ PDF copied to _site directory before Jekyll build"
     
-    - name: Build Jekyll site with version
+    - name: Build Jekyll site
       run: |
-        echo "=== Contents of _config.yml before build ==="
-        cat _config.yml
-        echo "=== Building site ==="
         bundle exec jekyll build --trace
-        echo "=== Checking generated index.html ==="
-        grep "cv-version" _site/index.html || echo "cv-version not found"
       shell: bash
           
     - name: Verify PDF in site directory
@@ -72,18 +57,6 @@ jobs:
           echo "✗ PDF NOT found in _site directory"
           exit 1
         fi
-        
-    - name: Verify version in generated HTML
-      run: |
-        echo "Checking if version appears in index.html..."
-        if grep -q "Version: $(cat version)" _site/index.html; then
-          echo "✓ Version $(cat version) found in index.html"
-        else
-          echo "✗ Version NOT found in index.html"
-          echo "Contents around 'Version:' in index.html:"
-          grep -A 2 -B 2 "Version:" _site/index.html || echo "Version string not found at all"
-        fi
-    
         
     - name: Setup Pages (if main branch)
       if: github.ref == 'refs/heads/main'
