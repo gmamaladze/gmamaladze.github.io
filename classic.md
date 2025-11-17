@@ -5,7 +5,7 @@ permalink: /classic
 ---
 
 # George Mamaladze
-![George Mamaladze](gmamaladze-profile.png){: .profile-image}
+![George Mamaladze](picture.png){: .profile-image}
 
 ---
 

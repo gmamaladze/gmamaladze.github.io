@@ -33,31 +33,14 @@ jobs:
     - name: Generate PDF with Typst
       run: |
         typst compile cv-printable.typ George_Mamaladze_CV.pdf
-        ls -la
-        echo "PDF generated successfully"
-
-    - name: Copy PDF to site directory before Jekyll build
-      run: |
         mkdir -p _site
         cp George_Mamaladze_CV.pdf _site/
-        echo "✓ PDF copied to _site directory before Jekyll build"
     
     - name: Build Jekyll site
       run: |
         bundle exec jekyll build --trace
       shell: bash
           
-    - name: Verify PDF in site directory
-      run: |
-        ls -la _site/
-        if [ -f "_site/George_Mamaladze_CV.pdf" ]; then
-          echo "✓ PDF found in _site directory"
-          ls -lh _site/George_Mamaladze_CV.pdf
-        else
-          echo "✗ PDF NOT found in _site directory"
-          exit 1
-        fi
-        
     - name: Setup Pages (if main branch)
       if: github.ref == 'refs/heads/main'
       uses: actions/configure-pages@v4
