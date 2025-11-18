@@ -1,0 +1,916 @@
+{
+  "technologies": [
+    {
+      "id": 1,
+      "name": "Continuous compliance",
+      "quadrant": "Techniques",
+      "ring": "Adopt",
+      "description": "Automating regulatory and security checks via policy-as-code and pipelines, instead of manual audits.",
+      "url": null
+    },
+    {
+      "id": 2,
+      "name": "Curated shared instructions for software teams",
+      "quadrant": "Techniques",
+      "ring": "Adopt",
+      "description": "Shared, versioned prompt and instruction libraries to standardize AI usage across a delivery team.",
+      "url": null
+    },
+    {
+      "id": 3,
+      "name": "Pre-commit hooks",
+      "quadrant": "Techniques",
+      "ring": "Adopt",
+      "description": "Git hooks that run quick checks before commits, preventing secrets or bad code from entering repos.",
+      "url": "https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks"
+    },
+    {
+      "id": 4,
+      "name": "Using GenAI to understand legacy codebases",
+      "quadrant": "Techniques",
+      "ring": "Adopt",
+      "description": "Applying GenAI tools to summarize, navigate and explain large, complex legacy systems faster.",
+      "url": "https://www.thoughtworks.com/radar/techniques/using-ai-to-understand-legacy-codebases"
+    },
+    {
+      "id": 5,
+      "name": "AGENTS.md",
+      "quadrant": "Techniques",
+      "ring": "Trial",
+      "description": "A project-level document describing available AI agents, capabilities and usage conventions for a team.",
+      "url": "https://www.thoughtworks.com/radar/techniques/agents-md"
+    },
+    {
+      "id": 6,
+      "name": "AI for code migrations",
+      "quadrant": "Techniques",
+      "ring": "Trial",
+      "description": "Using AI to assist in migrating code between frameworks, languages or architectures.",
+      "url": null
+    },
+    {
+      "id": 7,
+      "name": "Delta Lake liquid clustering",
+      "quadrant": "Techniques",
+      "ring": "Trial",
+      "description": "A data-layout optimization technique in Delta Lake that improves performance for large analytical tables.",
+      "url": null
+    },
+    {
+      "id": 8,
+      "name": "Self-serve UI prototyping with GenAI",
+      "quadrant": "Techniques",
+      "ring": "Trial",
+      "description": "Empowering teams to generate and iterate on UI prototypes using GenAI-based design tools.",
+      "url": "https://www.thoughtworks.com/radar/techniques/self-serve-ui-prototyping-with-genai"
+    },
+    {
+      "id": 9,
+      "name": "Structured output from LLMs",
+      "quadrant": "Techniques",
+      "ring": "Trial",
+      "description": "Prompting and tooling patterns to make LLMs reliably return JSON or typed objects instead of raw text.",
+      "url": "https://www.thoughtworks.com/radar/techniques/structured-output-from-llms"
+    },
+    {
+      "id": 10,
+      "name": "TCR (Test && Commit || Revert)",
+      "quadrant": "Techniques",
+      "ring": "Trial",
+      "description": "A workflow where code changes are auto-committed on passing tests or automatically reverted on failure.",
+      "url": null
+    },
+    {
+      "id": 11,
+      "name": "AI-powered UI testing",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Using AI to generate, maintain and execute UI tests based on visual or behavioral understanding.",
+      "url": null
+    },
+    {
+      "id": 12,
+      "name": "Anchoring coding agents to a reference application",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Grounding AI coding agents in a known, high-quality reference app to guide code suggestions.",
+      "url": null
+    },
+    {
+      "id": 13,
+      "name": "Context engineering",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Systematically designing prompts, memory and retrieval context to improve LLM performance.",
+      "url": "https://www.thoughtworks.com/radar/techniques/context-engineering"
+    },
+    {
+      "id": 14,
+      "name": "GenAI for forward engineering",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Using GenAI to help create new systems and features, not just refactor or understand existing ones.",
+      "url": "https://www.thoughtworks.com/radar/techniques/genai-for-forward-engineering"
+    },
+    {
+      "id": 15,
+      "name": "GraphQL as data access pattern for LLMs",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Exposing data via GraphQL to give LLMs controlled, queryable access to backend information.",
+      "url": null
+    },
+    {
+      "id": 16,
+      "name": "Knowledge flows over knowledge stocks",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Prioritizing continuous learning and sharing practices over static knowledge repositories.",
+      "url": null
+    },
+    {
+      "id": 17,
+      "name": "LLM as a judge",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Using LLMs to evaluate outputs, compare options or grade responses instead of only generating them.",
+      "url": null
+    },
+    {
+      "id": 18,
+      "name": "On-device information retrieval",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Running retrieval and embedding workflows directly on user devices for privacy and offline operation.",
+      "url": null
+    },
+    {
+      "id": 19,
+      "name": "SAIF",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "A safety framework for AI systems focused on structured assessments and mitigations of risks.",
+      "url": null
+    },
+    {
+      "id": 20,
+      "name": "Service mesh without sidecar",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Service mesh architectures that avoid per-pod sidecars, using node-level or ambient proxies instead.",
+      "url": null
+    },
+    {
+      "id": 21,
+      "name": "Small language models",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Focusing on compact LLMs that can run cheaply or on-device, tailored to narrower tasks.",
+      "url": null
+    },
+    {
+      "id": 22,
+      "name": "Spec-driven development",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Designing and implementing systems guided by executable specifications and contracts.",
+      "url": "https://www.thoughtworks.com/radar/techniques/spec-driven-development"
+    },
+    {
+      "id": 23,
+      "name": "Team of coding agents",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Coordinating multiple specialized AI agents to collaboratively perform software delivery tasks.",
+      "url": null
+    },
+    {
+      "id": 24,
+      "name": "Topology-aware scheduling",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Scheduling workloads with awareness of hardware, network and placement topology for efficiency.",
+      "url": "https://www.thoughtworks.com/radar/techniques/topology-aware-scheduling"
+    },
+    {
+      "id": 25,
+      "name": "Toxic flow analysis for AI",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "description": "Analyzing how harmful prompts or data can flow through AI systems to cause unsafe outcomes.",
+      "url": "https://www.thoughtworks.com/radar/techniques/toxic-flow-analysis-for-ai"
+    },
+    {
+      "id": 26,
+      "name": "AI-accelerated shadow IT",
+      "quadrant": "Techniques",
+      "ring": "Hold",
+      "description": "Uncontrolled business use of AI to build systems outside IT governance, increasing risk.",
+      "url": "https://www.thoughtworks.com/radar/techniques/ai-accelerated-shadow-it"
+    },
+    {
+      "id": 27,
+      "name": "Capacity-driven development",
+      "quadrant": "Techniques",
+      "ring": "Hold",
+      "description": "Letting available team capacity, rather than value or outcomes, drive what gets built.",
+      "url": null
+    },
+    {
+      "id": 28,
+      "name": "Complacency with AI-generated code",
+      "quadrant": "Techniques",
+      "ring": "Hold",
+      "description": "Trusting AI-generated code without adequate review, testing or security scrutiny.",
+      "url": "https://www.thoughtworks.com/radar/techniques/complacency-with-ai-generated-code"
+    },
+    {
+      "id": 29,
+      "name": "Naive API-to-MCP conversion",
+      "quadrant": "Techniques",
+      "ring": "Hold",
+      "description": "Blindly wrapping existing APIs as MCP tools without redesigning for safe agent use.",
+      "url": "https://www.thoughtworks.com/radar/techniques/naive-api-to-mcp-conversion"
+    },
+    {
+      "id": 30,
+      "name": "Standalone data engineering teams",
+      "quadrant": "Techniques",
+      "ring": "Hold",
+      "description": "Organizing isolated data teams instead of embedding data capabilities in product teams.",
+      "url": null
+    },
+    {
+      "id": 31,
+      "name": "Text to SQL",
+      "quadrant": "Techniques",
+      "ring": "Hold",
+      "description": "Natural-language interfaces that generate SQL directly, often with hidden safety and correctness risks.",
+      "url": "https://www.thoughtworks.com/radar/techniques/text-to-sql"
+    },
+    {
+      "id": 32,
+      "name": "Arm in the cloud",
+      "quadrant": "Platforms",
+      "ring": "Adopt",
+      "description": "Using Arm-based cloud instances to gain cost and efficiency benefits over traditional x86 nodes.",
+      "url": null
+    },
+    {
+      "id": 33,
+      "name": "Apache Paimon",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "description": "A streaming lakehouse table format for large-scale data with ACID semantics and upserts.",
+      "url": "https://paimon.apache.org"
+    },
+    {
+      "id": 34,
+      "name": "DataDog LLM Observability",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "description": "DataDog’s features for tracing, monitoring and evaluating LLM-powered applications.",
+      "url": "https://www.datadoghq.com/product/llm-observability/"
+    },
+    {
+      "id": 35,
+      "name": "Delta Sharing",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "description": "An open protocol for secure data sharing on lakehouse platforms like Delta Lake.",
+      "url": "https://delta.io/sharing"
+    },
+    {
+      "id": 36,
+      "name": "Dovetail",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "description": "A research repository platform to store, tag and analyze qualitative user research.",
+      "url": "https://dovetail.com"
+    },
+    {
+      "id": 37,
+      "name": "Langdock",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "description": "A platform for building and hosting internal AI assistants and agentic workflows for enterprises.",
+      "url": "https://www.langdock.com"
+    },
+    {
+      "id": 38,
+      "name": "LangSmith",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "description": "LangChain’s observability and evaluation platform for debugging and improving LLM applications.",
+      "url": "https://www.langchain.com/langsmith"
+    },
+    {
+      "id": 39,
+      "name": "Model Context Protocol (MCP)",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "description": "An open standard for connecting LLM apps to external data and tools via MCP servers and clients.",
+      "url": "https://modelcontextprotocol.io"
+    },
+    {
+      "id": 40,
+      "name": "n8n",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "description": "A self-hostable, low-code workflow automation platform with strong integration and scripting support.",
+      "url": "https://n8n.io"
+    },
+    {
+      "id": 41,
+      "name": "OpenThread",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "description": "Google’s open-source implementation of the Thread mesh networking protocol for IoT devices.",
+      "url": "https://openthread.io"
+    },
+    {
+      "id": 42,
+      "name": "AG-UI Protocol",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A protocol that standardizes real-time communication between front-end UIs and AI agents.",
+      "url": null
+    },
+    {
+      "id": 43,
+      "name": "Agent-to-Agent (A2A) Protocol",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A protocol defining how AI agents discover each other and exchange capabilities securely.",
+      "url": null
+    },
+    {
+      "id": 44,
+      "name": "Amazon S3 Vectors",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "AWS-native vector storage and search capabilities built into Amazon S3.",
+      "url": "https://aws.amazon.com/s3/features/vector-engine/"
+    },
+    {
+      "id": 45,
+      "name": "Ardoq",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A graph-based enterprise architecture platform for modeling systems, dependencies and impacts.",
+      "url": "https://www.ardoq.com"
+    },
+    {
+      "id": 46,
+      "name": "CloudNativePG",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A Kubernetes operator for managing high-availability PostgreSQL clusters natively on Kubernetes.",
+      "url": "https://cloudnative-pg.io"
+    },
+    {
+      "id": 47,
+      "name": "Coder",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A platform for running development environments in the cloud, centrally managed and reproducible.",
+      "url": "https://coder.com"
+    },
+    {
+      "id": 48,
+      "name": "Graft",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A platform for building AI-native applications that combine data, models and workflows.",
+      "url": "https://www.graft.com"
+    },
+    {
+      "id": 49,
+      "name": "groundcover",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A Kubernetes-native observability platform focusing on eBPF-based metrics and traces.",
+      "url": "https://www.groundcover.com"
+    },
+    {
+      "id": 50,
+      "name": "Karmada",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A multi-cluster Kubernetes orchestration system for managing workloads across clouds and regions.",
+      "url": "https://karmada.io"
+    },
+    {
+      "id": 51,
+      "name": "OpenFeature",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A vendor-neutral standard and SDK for feature flag management across different providers.",
+      "url": "https://openfeature.dev"
+    },
+    {
+      "id": 52,
+      "name": "Oxide",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "An integrated rack-scale server platform aiming to bring cloud-like operations to on-premises hardware.",
+      "url": "https://oxide.computer"
+    },
+    {
+      "id": 53,
+      "name": "Restate",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A platform for building durable event-driven services with automatic state management and retries.",
+      "url": "https://restate.dev"
+    },
+    {
+      "id": 54,
+      "name": "SkyPilot",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A framework for running AI and batch jobs across multiple cloud providers efficiently.",
+      "url": "https://skypilot.readthedocs.io"
+    },
+    {
+      "id": 55,
+      "name": "StarRocks",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A high-performance MPP analytical database optimized for real-time and ad hoc queries.",
+      "url": "https://www.starrocks.io"
+    },
+    {
+      "id": 56,
+      "name": "Uncloud",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "description": "A lightweight way to cluster Docker Compose apps into a decentralized, cloud-like environment.",
+      "url": "https://github.com/psviderski/uncloud"
+    },
+    {
+      "id": 57,
+      "name": "ClickHouse",
+      "quadrant": "Tools",
+      "ring": "Adopt",
+      "description": "A columnar OLAP database for extremely fast analytical queries on large datasets.",
+      "url": "https://clickhouse.com"
+    },
+    {
+      "id": 58,
+      "name": "NeMo Guardrails",
+      "quadrant": "Tools",
+      "ring": "Adopt",
+      "description": "NVIDIA’s toolkit for enforcing safety rules and conversation flows around LLM applications.",
+      "url": "https://github.com/NVIDIA/NeMo-Guardrails"
+    },
+    {
+      "id": 59,
+      "name": "pnpm",
+      "quadrant": "Tools",
+      "ring": "Adopt",
+      "description": "A fast, disk-efficient JavaScript package manager using a content-addressable store and symlinks.",
+      "url": "https://pnpm.io"
+    },
+    {
+      "id": 60,
+      "name": "Pydantic",
+      "quadrant": "Tools",
+      "ring": "Adopt",
+      "description": "A Python library for data validation and settings management using type annotations.",
+      "url": "https://docs.pydantic.dev"
+    },
+    {
+      "id": 61,
+      "name": "AI Design Reviewer",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "description": "AI tooling to automatically review and provide feedback on UX and UI designs.",
+      "url": "https://www.thoughtworks.com/radar/tools/ai-design-reviewer"
+    },
+    {
+      "id": 62,
+      "name": "Barman",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "description": "A backup and disaster recovery tool for PostgreSQL databases.",
+      "url": "https://www.pgbarman.org"
+    },
+    {
+      "id": 63,
+      "name": "Claude Code",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "description": "Anthropic’s AI coding assistant for editing, generating and understanding codebases.",
+      "url": "https://www.thoughtworks.com/radar/tools/claude-code"
+    },
+    {
+      "id": 64,
+      "name": "Cleanlab",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "description": "A library for finding and correcting label errors and data issues in ML datasets.",
+      "url": "https://cleanlab.ai"
+    },
+    {
+      "id": 65,
+      "name": "Context7",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "description": "A tool for managing and optimizing context windows for LLM-powered applications.",
+      "url": "https://www.thoughtworks.com/radar/tools/context7"
+    },
+    {
+      "id": 66,
+      "name": "Data Contract CLI",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "description": "A CLI tool to define, validate and enforce data contracts across services.",
+      "url": null
+    },
+    {
+      "id": 67,
+      "name": "Databricks Assistant",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "description": "An AI assistant integrated into Databricks to help write code, queries and documentation.",
+      "url": "https://www.databricks.com/product/assistant"
+    },
+    {
+      "id": 68,
+      "name": "Hoppscotch",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "description": "An open-source API client for testing REST, GraphQL and other APIs in the browser.",
+      "url": "https://hoppscotch.io"
+    },
+    {
+      "id": 69,
+      "name": "NVIDIA DCGM Exporter",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "description": "Exports NVIDIA GPU telemetry via DCGM into monitoring systems like Prometheus.",
+      "url": "https://github.com/NVIDIA/dcgm-exporter"
+    },
+    {
+      "id": 70,
+      "name": "RelationalAI",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "description": "A cloud-native knowledge graph and analytics platform integrated with data warehouses.",
+      "url": "https://relational.ai"
+    },
+    {
+      "id": 71,
+      "name": "UX Pilot",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "description": "A toolset for testing and exploring UX flows, including AI-assisted experiments.",
+      "url": "https://www.thoughtworks.com/radar/tools/ux-pilot"
+    },
+    {
+      "id": 72,
+      "name": "v0",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "description": "Vercel’s AI-powered UI and code generation tool for building React-based interfaces.",
+      "url": "https://v0.dev"
+    },
+    {
+      "id": 73,
+      "name": "Augment Code",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "description": "A secure, personal code search and LLM assistant for navigating large codebases.",
+      "url": "https://www.augmentcode.com"
+    },
+    {
+      "id": 74,
+      "name": "Azure AI Document Intelligence",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "description": "Microsoft’s cloud service for extracting structured data from documents using AI.",
+      "url": "https://azure.microsoft.com/products/ai-services/ai-document-intelligence"
+    },
+    {
+      "id": 75,
+      "name": "Docling",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "description": "An open-source library that converts complex documents into clean, AI-ready structured formats.",
+      "url": "https://docling-project.github.io/docling/"
+    },
+    {
+      "id": 76,
+      "name": "E2B",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "description": "Secure cloud sandboxes for running AI-generated code in isolated microVMs.",
+      "url": "https://github.com/e2b-dev/E2B"
+    },
+    {
+      "id": 77,
+      "name": "Helix editor",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "description": "A modal text editor with multiple cursors, Tree-sitter and LSP support, inspired by Vim.",
+      "url": "https://helix-editor.com"
+    },
+    {
+      "id": 78,
+      "name": "Kueue",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "description": "A Kubernetes-native job queueing controller for managing resource-sensitive batch workloads.",
+      "url": "https://kueue.sigs.k8s.io"
+    },
+    {
+      "id": 79,
+      "name": "MCP-Scan",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "description": "A security scanner and proxy for MCP servers that detects prompt injection and toxic flows.",
+      "url": "https://github.com/anthropics/mcp-scan"
+    },
+    {
+      "id": 80,
+      "name": "oRPC",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "description": "A TypeScript RPC framework that generates OpenAPI-compliant, end-to-end typesafe APIs.",
+      "url": null
+    },
+    {
+      "id": 81,
+      "name": "Power user for dbt",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "description": "A VS Code extension that adds lineage, autocomplete and query tools for dbt projects.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=innoverio.vscode-dbt-power-user"
+    },
+    {
+      "id": 82,
+      "name": "Serena",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "description": "A symbol-aware toolkit that gives coding agents fine-grained navigation and editing powers.",
+      "url": "https://github.com/oraios/serena"
+    },
+    {
+      "id": 83,
+      "name": "SweetPad",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "description": "A VS Code/Cursor extension to support full Swift app development without Xcode.",
+      "url": "https://github.com/sweetpad-dev/sweetpad"
+    },
+    {
+      "id": 84,
+      "name": "Tape/Z",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "description": "Open tools for analyzing and visualizing IBM Z/OS assembly programs.",
+      "url": "https://github.com/avishek-sen-gupta/tape-z"
+    },
+    {
+      "id": 85,
+      "name": "Fastify",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Adopt",
+      "description": "A fast, low-overhead Node.js web framework optimized for performance and developer ergonomics.",
+      "url": "https://fastify.dev"
+    },
+    {
+      "id": 86,
+      "name": "LangGraph",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Adopt",
+      "description": "A graph-based framework for orchestrating complex, stateful LLM workflows and agents.",
+      "url": "https://www.thoughtworks.com/radar/languages-and-frameworks/langgraph"
+    },
+    {
+      "id": 87,
+      "name": "vLLM",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Adopt",
+      "description": "An optimized inference engine for serving LLMs efficiently, especially with large batch workloads.",
+      "url": "https://vllm.ai"
+    },
+    {
+      "id": 88,
+      "name": "Crossplane",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial",
+      "description": "A Kubernetes-based control plane for managing cloud infrastructure through declarative APIs.",
+      "url": "https://www.crossplane.io"
+    },
+    {
+      "id": 89,
+      "name": "DeepEval",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial",
+      "description": "A framework for systematically evaluating LLM outputs with metrics and test suites.",
+      "url": "https://deepeval.com"
+    },
+    {
+      "id": 90,
+      "name": "FastMCP",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial",
+      "description": "A framework for quickly building MCP servers and tools for LLM applications.",
+      "url": "https://github.com/fastmcp/fastmcp"
+    },
+    {
+      "id": 91,
+      "name": "LiteLLM",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial",
+      "description": "A unified API layer for calling many LLM providers with a consistent interface.",
+      "url": "https://github.com/BerriAI/litellm"
+    },
+    {
+      "id": 92,
+      "name": "MLForecast",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial",
+      "description": "A time-series forecasting library that integrates classical models with modern ML approaches.",
+      "url": "https://nixtla.github.io/mlforecast"
+    },
+    {
+      "id": 93,
+      "name": "Nuxt",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial",
+      "description": "A Vue-based meta-framework for building full-stack web apps and hybrid-rendered sites.",
+      "url": "https://nuxt.com"
+    },
+    {
+      "id": 94,
+      "name": "Phoenix",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial",
+      "description": "An Elixir web framework known for performance, real-time features and LiveView.",
+      "url": "https://www.phoenixframework.org"
+    },
+    {
+      "id": 95,
+      "name": "Presidio",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial",
+      "description": "Microsoft’s open-source toolkit for detecting and anonymizing PII in text.",
+      "url": "https://microsoft.github.io/presidio/"
+    },
+    {
+      "id": 96,
+      "name": "Pydantic AI",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial",
+      "description": "A Python framework using Pydantic models to build structured, production-ready GenAI apps.",
+      "url": "https://pydantic.dev/articles/pydantic-ai-v1/"
+    },
+    {
+      "id": 97,
+      "name": "Tauri",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial",
+      "description": "A Rust-based framework for secure, lightweight desktop and mobile apps using web UIs.",
+      "url": "https://tauri.app"
+    },
+    {
+      "id": 98,
+      "name": "Agent Development Kit (ADK)",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "Google’s framework for building AI agents with structured workflows and deep GCP integration.",
+      "url": "https://google.github.io/adk-docs/"
+    },
+    {
+      "id": 99,
+      "name": "Agno",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "A framework for building multi-agent systems with an integrated runtime for monitoring and control.",
+      "url": "https://github.com/agno-agi/agno"
+    },
+    {
+      "id": 100,
+      "name": "assistant-ui",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "A React/TypeScript library for building rich, streaming AI chat interfaces quickly.",
+      "url": "https://github.com/assistant-ui/assistant-ui"
+    },
+    {
+      "id": 101,
+      "name": "AutoRound",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "A framework for automating quantization and optimization of deep learning models for deployment.",
+      "url": null
+    },
+    {
+      "id": 102,
+      "name": "Browser Use",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "A library enabling LLM agents to control a browser for web navigation and automation.",
+      "url": null
+    },
+    {
+      "id": 103,
+      "name": "DeepSpeed",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "Microsoft’s deep learning optimization library for training huge models efficiently.",
+      "url": "https://www.deepspeed.ai"
+    },
+    {
+      "id": 104,
+      "name": "Drizzle",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "A TypeScript-first ORM and SQL toolkit with strong type safety for modern web apps.",
+      "url": "https://orm.drizzle.team"
+    },
+    {
+      "id": 105,
+      "name": "Java post-quantum cryptography",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "Java libraries and APIs implementing NIST-aligned, post-quantum-safe cryptographic algorithms.",
+      "url": null
+    },
+    {
+      "id": 106,
+      "name": "kagent",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "A framework or library for building Kubernetes-aware agents and automation workflows.",
+      "url": null
+    },
+    {
+      "id": 107,
+      "name": "LangExtract",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "Tooling for extracting structured data and features from unstructured text using LLMs.",
+      "url": null
+    },
+    {
+      "id": 108,
+      "name": "Langflow",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "A visual builder for composing and deploying LangChain and other LLM workflows.",
+      "url": "https://www.langflow.org"
+    },
+    {
+      "id": 109,
+      "name": "LMCache",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "A caching layer for LLM calls to reuse previous responses and reduce costs.",
+      "url": null
+    },
+    {
+      "id": 110,
+      "name": "Mem0",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "A memory layer for LLMs that persists and retrieves user-specific information over time.",
+      "url": null
+    },
+    {
+      "id": 111,
+      "name": "Open Security Control Assessment Language (OSCAL)",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "A NIST standard for machine-readable security controls, baselines and assessment data.",
+      "url": "https://pages.nist.gov/OSCAL"
+    },
+    {
+      "id": 112,
+      "name": "OpenInference",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "An open standard for capturing and sharing telemetry about ML and LLM inference.",
+      "url": null
+    },
+    {
+      "id": 113,
+      "name": "Valibot",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "A lightweight TypeScript schema validation library for runtime-safe data structures.",
+      "url": "https://valibot.dev"
+    },
+    {
+      "id": 114,
+      "name": "Vercel AI SDK",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Assess",
+      "description": "Vercel’s SDK for building streaming AI chat and generative UI experiences with React.",
+      "url": "https://sdk.vercel.ai"
+    }
+  ]
+}
