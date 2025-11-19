@@ -10,6 +10,7 @@ permalink: /classic
 ---
 
 [Timeline View](./){: .download-link}
+[Technology Radar](./radar){: .download-link}
 [Download PDF](George_Mamaladze_CV.pdf){: .download-link}
 
 

@@ -11,14 +11,15 @@ permalink: /radar
 
 <div style="position: relative;left: 30%;width: 70%;" markdown="1">
 [Classic View](./classic){: .download-link}
+[Timeline View](./){: .download-link}
 [Download PDF](George_Mamaladze_CV.pdf){: .download-link}
 </div>
 
 <link rel="stylesheet" href="{{ '/radar.css' | relative_url }}">
 
 ## Technology Radar
-
-This **Personal Technology Radar** is inspired by the well-know [Thoughtworks Technology Radar](https://www.thoughtworks.com/en-us/radar/faq). It serves as a *living map* of my technical landscape — showing what I rely on *today*, what I’m *experimenting* with, and what I may *revisit* in the future. This radar is evolving as I learn, adopt, or phase out technologies. I maintain it since 2017. See: [Medium Article (ge)](https://medium.com/@gmamaladze/%E1%83%A0%E1%83%9D%E1%83%9B%E1%83%94%E1%83%9A%E1%83%98-%E1%83%9E%E1%83%A0%E1%83%9D%E1%83%92%E1%83%A0%E1%83%90%E1%83%9B%E1%83%98%E1%83%A0%E1%83%94%E1%83%91%E1%83%98%E1%83%A1-%E1%83%94%E1%83%9C%E1%83%90-%E1%83%95%E1%83%98%E1%83%A1%E1%83%AC%E1%83%90%E1%83%95%E1%83%9A%E1%83%9D%E1%83%97-cce1a4974ce1)
+Technologies and Skills section in my callsic CV does not provide the full picture of my technical landscape which is constantly evolving.
+This **Technology Radar**, inspired by the well-know [Thoughtworks Technology Radar](https://www.thoughtworks.com/en-us/radar/faq), is a *living map* of my technical landscape, showing what I rely on *today*, what I’m *experimenting* with, and what I may *revisit* in the future. This radar is evolving as I learn, adopt, or phase out technologies. I maintain it since 2017. See: [Medium Article (ge)](https://medium.com/@gmamaladze/%E1%83%A0%E1%83%9D%E1%83%9B%E1%83%94%E1%83%9A%E1%83%98-%E1%83%9E%E1%83%A0%E1%83%9D%E1%83%92%E1%83%A0%E1%83%90%E1%83%9B%E1%83%98%E1%83%A0%E1%83%94%E1%83%91%E1%83%98%E1%83%A1-%E1%83%94%E1%83%9C%E1%83%90-%E1%83%95%E1%83%98%E1%83%A1%E1%83%AC%E1%83%90%E1%83%95%E1%83%9A%E1%83%9D%E1%83%97-cce1a4974ce1)
 
 
 ## Quadrants and Rings
