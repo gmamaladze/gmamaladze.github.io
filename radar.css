@@ -1,0 +1,107 @@
+/* Heading styles */
+h1, h2, h3 {
+    margin: 0;
+}
+
+h2, h3 {
+    left: 0%;
+    text-align: center;
+}
+
+
+/* Text and list styles */
+p {
+    left: 0%;
+    width: 100%;
+}
+
+ul, ol, li {
+    left: 0%;
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.875rem;
+    margin: 1rem 0;
+}
+
+th, td {
+    text-align: left;
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem 0.75rem;
+}
+
+th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #0A192F;
+}
+
+tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* SVG Elements */
+.ring {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 1;
+}
+
+.quadrant {
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.quadrant:hover {
+    opacity: 0.9;
+}
+
+.quadrant-label {
+    font-size: 16px;
+    font-weight: bold;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.ring-label {
+    font-size: 14px;
+    font-weight: bold;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.blip {
+    cursor: pointer;
+}
+
+.blip-circle {
+    fill: white;
+    stroke: #333;
+    stroke-width: 1;
+    transition: none;
+}
+
+.blip-text {
+    fill: #333;
+    font-size: 12px;
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+}
+
+#info-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    max-width: 300px;
+    display: none;
+    z-index: 1000;
+}

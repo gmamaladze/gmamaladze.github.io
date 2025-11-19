@@ -4,111 +4,61 @@ title: George Mamaladze - Technology Radar
 permalink: /radar
 ---
 
-# Technology Radar
+# George Mamaladze
+![George Mamaladze](picture.png){: .profile-image}
+
+---
+
+<div style="text-align: center;" markdown="1">
+[Classic View](./classic){: .download-link}
+[Download PDF](George_Mamaladze_CV.pdf){: .download-link}
+</div>
+
+<link rel="stylesheet" href="{{ '/radar.css' | relative_url }}">
+
+## Technology Radar
+
+This **Personal Technology Radar** is inspired by the well-know [Thoughtworks Technology Radar](https://www.thoughtworks.com/en-us/radar/faq). Just like the original, it helps visualize and structure the evolution of the technologies I use, explore, and evaluate. It serves as a **living map** of my technical landscape — showing what I rely on today, what I’m experimenting with, and what I may revisit in the future.
+
+### Purpose of This Radar
+
+- Track what I *actually* use vs. what I *want to explore*.  
+- Make intentional decisions about adopting, archiving, or trialing technologies.  
+- Maintain a clear, structured view of my technical growth.  
+- Serve as a personal reference over time.
+
+This radar will evolve as I learn, adopt, or phase out technologies — acting as a dynamic snapshot of my engineering landscape.
+
+### Quadrants
+
+The radar uses the same four quadrants as Thoughtworks:
+
+| Quadrant | Meaning |
+|---------|---------|
+| **Techniques** | Approaches, design principles, architectural patterns, workflow methods, and engineering practices. |
+| **Tools** | Software tools, utilities, CLIs, editors, assistants, and development helpers used in day-to-day work. |
+| **Platforms** | Execution environments, cloud platforms, operating systems, infrastructure products, runtimes. |
+| **Languages & Frameworks** | Programming languages, backend/frontend frameworks, libraries, and major ecosystem stacks. |
+
+## Rings
+
+My rings differ from Thoughtworks and are personalized to reflect my own usage patterns:
+
+| Ring | Description |
+|------|-------------|
+| **Active** | Technologies I am actively using in my daily work and current projects. High familiarity and ongoing commitment. |
+| **Archive** | Technologies I used for years but not recently. Knowledge may be partially outdated, but I still consider them for future work. |
+| **Trial** | Technologies I’m evaluating in a few limited or controlled use cases. Not yet adopted, but promising. |
+| **Access** | Early exploration stage: reading, experimenting, PoCs, discussions. Curiosity-driven discovery without commitments. |
+
 
 <div id="radar-container">
     <svg id="radar" width="800" height="800"></svg>
 </div>
-<div id="info-panel">
-    <h3 id="info-name"></h3>
-    <p id="info-description"></p>
-</div>
 
-<style>
-    #radar-container {
-        background: white;
-        border-radius: 8px;
-        padding: 40px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    
-    svg {
-        display: block;
-    }
-    
-    .ring {
-        fill: none;
-        stroke: #e0e0e0;
-        stroke-width: 1;
-    }
-    
-    .quadrant {
-        opacity: 0.7;
-        transition: opacity 0.3s;
-        cursor: pointer;
-    }
-    
-    .quadrant:hover {
-        opacity: 0.9;
-    }
-    
-    .quadrant-label {
-        font-size: 16px;
-        font-weight: bold;
-        fill: #333;
-        text-anchor: middle;
-        pointer-events: none;
-    }
-    
-    .ring-label {
-        font-size: 12px;
-        fill: #666;
-        text-anchor: middle;
-        pointer-events: none;
-    }
-    
-    .blip {
-        cursor: pointer;
-    }
-    
-    .blip-circle {
-        fill: white;
-        stroke: #333;
-        stroke-width: 2;
-        transition: none;
-    }
-    
-    .blip-text {
-        fill: #333;
-        font-size: 12px;
-        font-weight: bold;
-        text-anchor: middle;
-        dominant-baseline: middle;
-        pointer-events: none;
-    }
-    
-    #info-panel {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: white;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        max-width: 300px;
-        display: none;
-        z-index: 1000;
-    }
-    
-    #info-panel.visible {
-        display: block;
-    }
-    
-    #info-panel h3 {
-        margin: 0 0 10px 0;
-        font-size: 16px;
-        color: #333;
-    }
-    
-    #info-panel p {
-        margin: 0;
-        font-size: 14px;
-        color: #666;
-        line-height: 1.4;
-    }
-</style>
+<script src="https://d3js.org/d3.v7.min.js"></script>
 
-<script src="/d3.v7.min.js"></script>
+
 <script>
 // radar.json powers the technology radar visualization
 var radarData = {{ site.data.radar | jsonify }};
@@ -122,10 +72,10 @@ const centerY = height / 2;
 // Configuration
 const ringGap = 1; // 1px gap between rings
 const rings = [
-    { name: 'Adopt', radius: 80 },
-    { name: 'Trial', radius: 160 + ringGap },
-    { name: 'Assess', radius: 240 + ringGap * 2 },
-    { name: 'Hold', radius: 320 + ringGap * 3 },
+    { name: 'Archive', radius: 110 },
+    { name: 'Active', radius: 205 + ringGap },
+    { name: 'Trial', radius: 300 + ringGap * 2 },
+    { name: 'Assess', radius: 395 + ringGap * 3 },
 ];
 
 const quadrants = [
@@ -236,7 +186,7 @@ rings.forEach((ring, index) => {
 // Add quadrant labels
 quadrants.forEach(quadrant => {
     const angle = toRadians((quadrant.startAngle + quadrant.endAngle) / 2 - 90);
-    const labelRadius = rings[rings.length - 1].radius + 30;
+    const labelRadius = rings[rings.length - 1].radius + 25;
     const x = centerX + labelRadius * Math.cos(angle);
     const y = centerY + labelRadius * Math.sin(angle);
     
@@ -274,21 +224,17 @@ function plotTechnologies(technologies) {
         const x = centerX + radiusOffset * Math.cos(angleRad);
         const y = centerY + radiusOffset * Math.sin(angleRad);
         
-        // Calculate target ring center for gravity
-        const ringCenterRadius = (ring.innerRadius + ring.outerRadius) / 2;
-        const targetAngleRad = toRadians((quadrant.startAngle + quadrant.endAngle) / 2 - 90);
-        const targetX = centerX + ringCenterRadius * Math.cos(targetAngleRad);
-        const targetY = centerY + ringCenterRadius * Math.sin(targetAngleRad);
+        // Calculate random target radius for each blip within the ring
+        const random3 = (tech.id * 0.73) % 1;
+        const targetRadius = ring.innerRadius + radiusRange * random3;
         
         return {
             ...tech,
             x: x,
             y: y,
-            targetX: targetX,
-            targetY: targetY,
             quadrant: quadrant,
             ring: ring,
-            ringCenterRadius: ringCenterRadius
+            targetRadius: targetRadius
         };
     }).filter(n => n !== null);
     
@@ -297,9 +243,31 @@ function plotTechnologies(technologies) {
         .force('charge', d3.forceManyBody().strength(-50)) // Repulsion between blips
         .force('collision', d3.forceCollide().radius(15)) // Prevent overlap
         .force('radial', d3.forceRadial(d => {
-            // Gravity toward the ring's center line in the quadrant
-            return d.ringCenterRadius;
+            // Each blip has its own random target radius
+            return d.targetRadius;
         }, centerX, centerY).strength(0.3))
+        .force('stripRepulsion', () => {
+            // Push blips away from the white strips (horizontal and vertical)
+            const stripWidth = 25;
+            const repulsionDistance = 20; // Distance from strip edge where repulsion starts
+            const repulsionStrength = 2; // Strength of the push
+            
+            nodes.forEach(d => {
+                // Repulsion from horizontal strip (centerY ± stripWidth/2)
+                const distFromHorizontal = Math.abs(d.y - centerY);
+                if (distFromHorizontal < stripWidth / 2 + repulsionDistance) {
+                    const pushStrength = repulsionStrength * (1 - distFromHorizontal / (stripWidth / 2 + repulsionDistance));
+                    d.y += (d.y > centerY ? pushStrength : -pushStrength);
+                }
+                
+                // Repulsion from vertical strip (centerX ± stripWidth/2)
+                const distFromVertical = Math.abs(d.x - centerX);
+                if (distFromVertical < stripWidth / 2 + repulsionDistance) {
+                    const pushStrength = repulsionStrength * (1 - distFromVertical / (stripWidth / 2 + repulsionDistance));
+                    d.x += (d.x > centerX ? pushStrength : -pushStrength);
+                }
+            });
+        })
         .force('boundary', () => {
             // Custom force to keep blips within their ring and quadrant
             nodes.forEach(d => {
