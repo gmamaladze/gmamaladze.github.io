@@ -4,6 +4,9 @@ style: cobalt
 repository: gmamaladze/gmamaladze.github.io
 baseurl: ""
 
+plugins:
+  - jekyll-sitemap
+
 exclude:
   - Gemfile
   - Gemfile.lock

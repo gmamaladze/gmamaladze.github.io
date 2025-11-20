@@ -383,6 +383,14 @@
       "ring": "Assess",
       "description": "A Vue-based meta-framework for building full-stack web apps and hybrid-rendered sites.",
       "url": "https://nuxt.com"
+    },
+    {
+      "id": 57,
+      "name": "Go",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial",
+      "description": "Efficient compiled language for building concurrent systems and cloud-native applications.",
+      "url": null
     }
   ]
 }
