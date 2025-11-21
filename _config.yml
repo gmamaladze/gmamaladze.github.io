@@ -2,7 +2,8 @@ markdown: kramdown
 style: cobalt
 
 repository: gmamaladze/gmamaladze.github.io
-baseurl: "https://cv.mamala.info"
+url: "https://cv.mamala.info"
+baseurl: ""
 
 plugins:
   - jekyll-sitemap
