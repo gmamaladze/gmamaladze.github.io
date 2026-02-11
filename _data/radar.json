@@ -388,8 +388,24 @@
       "id": 57,
       "name": "Go",
       "quadrant": "Languages & Frameworks",
-      "ring": "Trial",
+      "ring": "Active",
       "description": "Efficient compiled language for building concurrent systems and cloud-native applications.",
+      "url": null
+    },
+    {
+      "id": 59,
+      "name": "PHP",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Archive",
+      "description": "Widely used server-side scripting language. Phasing out of legacy stack in favor of modern alternatives.",
+      "url": null
+    },
+    {
+      "id": 60,
+      "name": "AI-Augmented Engineering",
+      "quadrant": "Techniques",
+      "ring": "Trial",
+      "description": "High-velocity development approach leveraging AI assistants intensively across the full SDLC, enabling smaller teams to deliver at the pace of much larger ones.",
       "url": null
     }
   ]
