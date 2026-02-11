@@ -107,10 +107,12 @@ var cvData = {{ site.data.cv | jsonify }};
 
 // Label offset adjustments by experience ID
 const labelOffsets = {
-    "SFA": { x: 0, y: 40 }, // Adjust Syniotec to avoid overlap
-    "TRN": { x: 0, y: 40 },   // Training position
+    "SCI": { x: 0, y: 0 },   // Scilife
+    "SFA": { x: 0, y: 20 },  // Siemens Factory Automation
+    "SYN": { x: 0, y: 60 },  // Syniotec - avoid overlap with Scilife
+    "TRN": { x: 0, y: 40 },  // Training position
     "EBR": { x: 0, y: 0 },   // EBRD
-    "FUN": { x: 0, y: 30  }, // FreeeUniversity
+    "FUN": { x: 0, y: 30 },  // Free University
 };
 
 const margin = {top: 0, right: 0, bottom: 0, left: 50};
@@ -123,10 +125,16 @@ const svg = d3.select("#timeline").append("svg")
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
+// Minimum visual duration: jobs shorter than 5 months appear as 5 months on the timeline
+const minVisualMonths = 12;
 const experiences = cvData.experience.map(d => {
     const startDate = new Date(d.period.start);
     const endDate = d.period.end ? new Date(d.period.end) : new Date();
-    return { ...d, startDate, endDate };
+    const monthsDiff = (endDate - startDate) / (1000 * 60 * 60 * 24 * 30);
+    const visualEndDate = monthsDiff < minVisualMonths
+        ? new Date(startDate.getFullYear(), startDate.getMonth() + minVisualMonths, startDate.getDate())
+        : endDate;
+    return { ...d, startDate, endDate: visualEndDate };
 });
 
 const minDate = d3.min(experiences, d => d.startDate);

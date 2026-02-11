@@ -1,12 +1,34 @@
 {
-  "summary": "Rare combination of deep conceptual technical knowledge and hands-on expertise. Technology leader with over 25 years of experience designing, building, and delivering software products and solutions. Ability to build and lead high-performing teams, organize processes, and drive innovation. Experience in interfacing with customers, understanding requirements, collaborating with executive leadership, developing and implementing strategies.",
-  "specializedIn": "Technology strategy, cloud-native architectures, microservices, team leadership, industrial automation software",
+  "summary": "Rare combination of deep conceptual technical knowledge, hands-on expertise, and engineering leadership. Technology leader with over 25 years of experience designing, building, and delivering software products and solutions. Proven ability to build and lead high-performing engineering organizations, drive platform transformations, and foster innovation. Experience spanning industrial automation, IoT, and regulated life sciences environments, with a track record of collaborating with executive leadership to align technology strategy with business goals.",
+  "specializedIn": "Technology strategy, cloud-native architectures, microservices, engineering leadership, quality management systems for life sciences",
   "experience": [
+    {
+      "id": "SCI",
+      "period": {
+        "start": "2026-01-01",
+        "end": null
+      },
+      "title": "VP of Engineering",
+      "company": "Scilife",
+      "location": "Remote",
+      "brandColor": "#CDAEFF",
+      "employmentType": "employed",
+      "timeCommitment": "full-time",
+      "description": "Scilife is the leading Smart Quality Platform for Life Sciences. It helps pharmaceutical, biotech, and medical device companies streamline quality management, automate compliance processes, and foster a quality-first culture. The platform serves hundreds of life sciences companies worldwide, ensuring regulatory compliance with standards like FDA 21 CFR Part 11, ISO 13485, and EU MDR.",
+      "website": "https://www.scilife.io",
+      "responsibilities": [
+        "Leading the engineering organization as a member of the leadership team, aligning priorities and shared direction",
+        "Driving platform modernization by introducing AI-driven development approaches and modern technologies to stay on top of the competition",
+        "Co-authoring and executing technology strategy aligned with company growth objectives",
+        "Establishing engineering practices, processes, and culture for a scaling SaaS organization in a regulated life sciences environment"
+      ],
+      "keyAchievements": []
+    },
     {
       "id": "SFA",
       "period": {
         "start": "2022-05-01",
-        "end": null
+        "end": "2026-01-01"
       },
       "title": "Senior Software Architect",
       "company": "Siemens AG",
